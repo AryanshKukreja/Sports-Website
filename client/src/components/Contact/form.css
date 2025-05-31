@@ -1,0 +1,88 @@
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2025bf;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10%;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color:rgb(56,248,8);
+}
+
+.contact-section label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(11, 8, 8);
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333333;
+    background: rgb(251, 251, 251);
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #333;
+    outline: none;
+    box-shadow: 0 0 5px rgba(51, 51, 51, 0.2);
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background-color: rgb(56,248,8);
+    color: rgb(11, 8, 8);
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #0ef01d;
+}
+
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5em;
+    }
+}
+
+.green-text{
+    color: rgb(56,248,8);
+}
+
+.white-text{
+    color: #ddd;
+} 
+
+label[for="name"],
+label[for="email"],
+label[for="message"] {
+  color: rgb(255, 255, 255);
+}

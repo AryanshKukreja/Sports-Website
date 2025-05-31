@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+  color: #DDFF00;
+}
+
+li {
+  list-style: none;
+}
+
+/*  navbar style */
+
+.mainNav {
+  background-color: #19174A;
+  width: 100%;
+  height: 7rem;
+  display: grid;
+  grid-template-columns: 8rem 1fr 5fr 4rem;
+  font-size: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  color: #DDFF00;
+  /* not sure */
+  position: fixed;
+  z-index: 99;
+}
+
+.logo2{
+  display: none;
+}
+
+.logo {
+  display: flex;
+  height: 6rem;
+  grid-column: 2/3;
+  margin-top: 0.5rem;
+  margin-right: 25rem;
+  border-radius: 10%;
+}
+
+.menu li {
+  transition: transform 0.3s ease;
+
+}
+
+.menu li:hover {
+  transform: translateY(-10px);
+}
+
+.menu li a:hover {
+  color: #DDFF00;
+}
+
+.logoimg {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.menu {
+  grid-column: 3/4;
+}
+
+.menu ul {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  font-size: smaller;
+}
+
+.nav-btn {
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  font-size: 1.8rem;
+}
+
+/* responsive css style  */
+
+/* 8rem 1fr 3fr 5rem; */
+@media (max-width: 1088px) {
+  .mainNav {
+    height: 7rem;
+    grid-template-columns: 2rem 1fr 1fr 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    position: fixed;
+  }
+
+  .logo {
+    grid-column: 1/2;
+    height: 5.5rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+
+
+  .menu ul {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+  }
+
+  li {
+    margin-right: 15px;
+  }
+
+  .menu ul {
+    height: 7rem;
+  }
+}
+
+
+
+
+
+/* responsive css style  */
+@media (max-width: 998px) {
+  .mainNav {
+    height: 7rem;
+    grid-template-columns: 2rem 2fr 3fr 2rem 2rem;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .logo {
+    height: 5.2rem;
+    margin-top: 15px;
+  }
+
+}
+
+@media (max-width: 998px){
+  .mainNav{
+    font-size: 18px;
+  }
+}
+
+
+
+
+@media (max-width: 798px) {
+  .head{
+    display: flex;
+    height: 8rem;
+    flex-direction: row;
+    padding-right: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #19174A;
+    z-index: 99;
+  }
+
+  .logoimg2{
+    border-radius: 50%;
+    height: 6rem;
+    margin-right: 50px;
+  }
+
+  .mainNav {
+    height: 10rem;
+    display: flex;
+    grid-template-columns: 20rem 1fr 1fr 2rem;
+  }
+
+  .logo2{
+    display: block; 
+    height: 1rem;
+  }
+  /* .logo {
+    margin-right: 0rem; 
+    height: 2rem;
+    right: 2rem;
+    top: 2rem;
+    grid-column: 1/2;
+    position: fixed;
+  } */
+
+  .menu {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20vh;
+    background-color: #19174A;
+    transition: 1s;
+  }
+
+  .menu ul{
+    position: fixed;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  .nav-btn {
+    visibility: visible;
+    opacity: 1;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .responsive_nav {
+    top: 0;
+    transform: translateY(100vh);
+    display: none;
+  }
+
+  .nav-close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+@media (max-width: 560px) {
+  .mainNav {
+    height: 6rem;
+    grid-template-columns: 1rem 1fr 3fr 1rem;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo {
+    height: 5rem;
+    margin-top: 0.5rem;
+  }
+
+  .menu{
+    position: fixed;
+    top: 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .menu ul li a{
+    font-size: 2rem;
+  }
+
+}

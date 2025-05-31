@@ -1,0 +1,56 @@
+h1,h2,h4{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.form-checkbox {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-right: -10px; /* Add some space between checkbox and text */
+}
+
+.form-checkbox label {
+  margin-left: 5px; /* Optional: Adds space between checkbox and label */
+}
+
+  
+/* .slotting{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.slots {
+    /* width: fit-content; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* display: grid;               Enable grid layout */
+    /* grid-template-columns: repeat(2, 1fr); 4 columns with equal width */
+    /* gap: 10px;                  Space between the slots */
+    /* width: 100%;                Full width of the parent */
+    /* margin-left: 25%;
+    margin-right: 25% */
+    /* grid-auto-rows: auto; */
+}
+  
+.slot {
+    background-color: lightblue; /* Background color for visibility */
+    padding: 15px;              /* Padding inside each slot */
+    text-align: center;         /* Center text inside the slot */
+    border: 1px solid #007BFF;  /* Optional: border for visual separation */
+    border-radius: 5px;        /* Optional: rounded corners */
+  }
+
+  .disclaimer {
+    color: red;
+    font-size: 0.9rem; /* Optional: Adjust size if needed */
+    margin-top: 5px; /* Optional: Adds spacing */
+    text-align: center;   
+  }
+  

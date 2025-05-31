@@ -1,0 +1,415 @@
+.content-page {
+    background-color: #13133F;
+}
+/* Fullscreen container */
+.bg-container {
+    position: relative;
+    height: 100vh; /* Fullscreen height */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Blurred background image */
+  .bg-image {
+    background-image: url('./assets/gymkhana.jpg'); /* Replace with your actual image path */
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(2px); /* Add the blur effect */
+    -webkit-filter: blur(3px); /* For Safari */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1; /* Ensure it stays behind text */
+  }
+  
+  /* Centered text */
+  .bg-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: white;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+  }
+  
+  .wl1 {
+    font-size: 6rem;
+    margin: 0;
+  }
+  
+  .wl2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .content-page {
+    background-color: #13133F;
+}
+
+.img1 {
+    width: 90%;
+    height: 90%;
+    margin-left: 6vw;
+    margin-top: 23vh;
+    margin-bottom: 10vh;
+    border-radius: 2%;
+}
+
+
+
+
+.about {
+    margin-left: 200px;
+    width: 100vw;
+    height: 90vh;
+    margin-bottom: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+
+}
+
+.aboutimg {
+    /* width: 25vw;
+    height: 50vh; */
+    margin-top: 10vh;
+    width: 30%;
+    border-radius: 5%;
+}
+
+.about---text{
+    text-align: start;
+}
+
+.aboutus{
+    color: white;
+    font-size: 3rem;
+    justify-content: center;
+    padding-top: 0%;
+}
+
+.aboutText {
+    width: 35vw;
+    height: auto;
+    border-radius: 2px;
+    flex-grow: 1;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.slogan{
+    color: #DDFF00;
+}
+.blackCats{
+    width: 100vw;
+    height: 90vh;
+    margin-bottom: 10vh;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.sportApp{
+    width: 100vw;
+    height: 70vh;
+    margin: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.vid{
+    width: 30vw;
+    height:60vh;
+}
+
+.apptext{
+    width: 35vw;
+    height: 35vh;
+    border-radius: 2px;
+    flex-grow: 1;
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 5vw;
+}
+
+#sportsapp{
+    margin-top: 40px;
+}
+
+video{
+    animation-play-state:running;
+    border-radius: 15%;
+}
+
+@media (max-width: 1088px){
+
+    .aboutimg{
+        width: 30vw;
+        margin-top: 80px;
+    }
+
+    .aboutus{
+        font-size: 2rem;
+    }
+    
+    .aboutText {
+        font-size: 1.2rem;
+    }
+
+    .blackCats{
+        height: 60vh;
+    }
+
+    #catimg{
+        margin-top: 80px;
+    }
+
+    #blacat{
+        margin-top: 40px;
+    }
+
+    .sportApp{
+        padding-top: 20vh;
+        height:90vh;
+        padding-bottom: 15vh;
+    }
+
+    .vid{
+        margin-top: 20vh;
+    }
+
+    .apptext{
+        font-size: 1.2rem;
+    }
+
+    #sportsapp{
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 884px){
+
+    .img{
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin-bottom: 5vh;
+    }
+    .img1{
+        margin-top: 20vh;
+        width:90vw;
+        height: 45vh;
+        margin-left: 0;
+    }
+
+    .wl1{
+        font-size: 4.6rem;
+    }
+    .wl2{
+        font-size: 5.8rem;
+    }
+
+    .blackCats{
+        height: 80vh;
+    }
+    .sportApp{
+        height: 85vh;
+        padding-bottom: 10vh;
+    }
+
+    .vid{
+        margin-bottom: 150px;
+    }
+}
+
+@media (max-width: 788px){
+
+    .img{
+        display: flex;
+        justify-content: center;
+        padding-left: 7%;
+    }
+
+    .img1{
+        width:90%;
+        height: 60%;
+        border-radius: 7%;
+    }
+
+    .wl1{
+        font-size: 3.5rem;
+    }
+    .wl2{
+        font-size: 4.5rem;
+    }
+
+    .aboutText{
+        font-size: 1rem;
+    }
+    .apptext{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 615px){
+
+    .welcome{
+        height: 45vh;
+    }
+    .wl1{
+        font-size: 2.5rem;
+    }
+    .wl2{
+        font-size:xxx-large;
+    }
+
+    .aboutText{
+        font-size: 15px;
+    }
+    .apptext{
+        font-size: 1rem;
+        
+    }
+
+}
+
+@media (max-width: 600px){
+    .img{
+        padding-left: 1%;
+    }
+    .img1{
+        width:380px;
+        border-radius: 7%;
+    }
+    .welcome{
+        height: 35vh;
+    }
+    .about{
+        /* flex-direction: column; */
+        justify-content:center;
+        align-items: center;
+        height: 100vh;
+        padding: 0;
+    }
+    .aboutimg{
+        left: 3rem;
+        width: 50vw;
+        align-items: center;
+        margin-left: 4vh;
+    }
+    .aboutus{
+        margin-left: 31vw;
+    }
+    .aboutText{
+        padding-right: 5px;
+        font-size: 20px;
+        width: 100%;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        text-align: center;
+    }
+    #blacat{
+        margin-left: 8vw;
+        font-size: 2rem;
+    }
+    .sportApp{
+        height: 125vh;
+        padding-bottom: 120px;
+    }
+    .vid{
+        margin-top: 5vh;
+        margin-bottom: 0;
+        width: 100vw;
+    }
+    #sportsapp{
+        margin-left: 28vw;
+    }
+    .apptext{
+        width: 100%;
+        font-size: 20px;
+        letter-spacing: 1.0;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    
+
+    
+    .about .aboutimg {
+        /* width: 25vw;
+        height: 50vh; */
+        margin-top: 1vh;
+        width: 80%;
+        border-radius: 5%;
+        height:35vh;
+        margin-bottom: 3vh;
+        margin-right: 4vh;
+    }
+
+    .blackCats .aboutimg {
+        /* width: 25vw;
+        height: 50vh; */
+        margin-top: 1vh;
+        width: 80%;
+        border-radius: 5%;
+        height:35vh;
+        margin-bottom: 3vh;
+        margin-right: 2vh;
+    }
+
+    .aboutus{
+        color: white;
+        font-size: 2rem;
+        justify-content: center;
+        margin-right: 6vh;
+        padding-right: 9vh;
+    }
+
+    #blacat{
+        margin-left: 30vw;
+        font-size: 2rem;
+        align-items: center;
+    }
+
+    .blackCats{
+        justify-content: center;
+        margin-top: 1vh;
+        text-align: center ;
+    }
+
+    .about{
+        margin-bottom: 0.5vh;
+    }
+    .abouttext{
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .sportApp .aboutus{
+        margin-left: 8vh;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .sportApp {
+        align-items: center;
+    }
+    .content-page {
+        align-items: center;
+    }
+}

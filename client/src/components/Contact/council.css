@@ -1,0 +1,76 @@
+.all_content{
+    text-align: center;
+    background-color: #13133F;
+}
+
+.leader{
+    margin-bottom: 2%;
+}
+
+h1{
+    color: rgb(56,248,8);
+    margin: 5%;
+}
+
+h2{
+    margin-top:4% ;
+}
+
+.tenure{
+    margin-top:-2% ;
+    margin-bottom: 3%;
+    color: black;
+}
+
+.gen{
+    width: 20%;
+    border-radius: 50%;
+}
+
+.circular{
+    width: 45%;
+    width: 45%;
+    border-radius: 10%;
+}
+
+.name{
+    font-size: larger;
+}
+
+.seclogos{
+    width: 20px;
+}
+
+.sec_mail_logos{
+    width: 30px;
+}
+
+.logos{
+    width: 20px;
+}
+
+.mail_logos{
+    width: 30px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; 
+    width: 100%;
+    max-width: 1400px; 
+    box-sizing: border-box;
+}
+
+.info-block {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 450px;
+    box-sizing: border-box;
+    text-align: center;
+}

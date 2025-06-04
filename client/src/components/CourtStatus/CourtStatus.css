@@ -1,0 +1,317 @@
+/* CourtStatus.css */
+
+:root {
+  --primary-color: #1a3a6a;
+  --secondary-color: #2c5697;
+  --accent-color: #448ef6;
+  --light-bg: #f8f9fa;
+  --dark-bg: #ebeef2;
+  --border-color: #d1d5db;
+  
+  --available-color: #10b981;
+  --booked-color: #ef4444;
+  --maintenance-color: #f59e0b;
+  
+  --header-height: 120px;
+  --footer-height: 60px;
+}
+
+/* Main Container */
+.court-status-container {
+  font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* Header */
+.cs-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cs-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 1rem;
+}
+
+.cs-date-display {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cs-date {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.cs-time {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* Sport Tabs */
+.cs-sport-tabs {
+  display: flex;
+  overflow-x: auto;
+  background-color: var(--secondary-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cs-sport-tab {
+  padding: 1rem 0.5rem;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cs-sport-tab:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cs-sport-tab.active {
+  color: white;
+  border-bottom: 3px solid var(--accent-color);
+  background-color: rgba(0, 0, 0, 0.2);
+  size:2rem;
+}
+
+.cs-sport-icon {
+  font-size: 1.2rem;
+}
+
+/* Legend */
+.cs-legend {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  background-color: var(--light-bg);
+  border-bottom: 1px solid var(--border-color);
+  color: black;
+}
+
+.cs-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: black;
+}
+
+.cs-legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.cs-legend-color.available {
+  background-color: var(--available-color);
+}
+
+.cs-legend-color.booked {
+  background-color: var(--booked-color);
+}
+
+.cs-legend-color.maintenance {
+  background-color: var(--maintenance-color);
+}
+
+/* Table Container */
+.cs-table-container {
+  overflow-x: auto;
+  position: relative;
+  min-height: 300px;
+}
+
+/* Loading */
+.cs-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--primary-color);
+}
+
+.cs-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: var(--accent-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Table */
+.cs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.cs-table th,
+.cs-table td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  color: black;
+}
+
+.cs-table thead th {
+  background-color: var(--dark-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-weight: 600;
+  color: black;
+}
+
+.cs-court-column {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background-color: var(--dark-bg);
+  min-width: 120px;
+  text-align: left;
+}
+
+.cs-time-column {
+  min-width: 90px;
+  white-space: nowrap;
+}
+
+.cs-time-column.current-time {
+  background-color: rgba(68, 142, 246, 0.2);
+  box-shadow: inset 0 -3px 0 var(--accent-color);
+}
+
+.cs-time-column.past-time {
+  color: #6b7280;
+}
+
+.cs-court-name {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 10;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* Slot Styling */
+.cs-slot {
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.cs-slot:hover {
+  transform: scale(1.05);
+  z-index: 5;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.cs-slot.available {
+  background-color: var(--available-color);
+}
+
+.cs-slot.booked {
+  background-color: var(--booked-color);
+}
+
+.cs-slot.maintenance {
+  background-color: var(--maintenance-color);
+}
+
+.cs-slot.unknown {
+  background-color: #9ca3af;
+}
+
+.cs-slot.current-time {
+  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.cs-status-indicator {
+  color: white;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.cs-facility-map-container {
+  color: black;
+}
+
+/* Footer */
+.cs-footer {
+  background-color: var(--light-bg);
+  padding: 1rem;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.875rem;
+  border-top: 1px solid var(--border-color);
+  height: 6rem;
+}
+
+.cs-facility-info {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.cs-map.controls{
+  color: black;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .cs-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .cs-date-display {
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .cs-legend {
+    flex-wrap: wrap;
+  }
+  button{
+    width:auto;
+  }
+}
+
+.cs-time-column {
+  color: black;
+}

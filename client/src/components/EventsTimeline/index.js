@@ -1,287 +1,79 @@
 import React, { useState, useEffect } from 'react';
-import {MapPin, ChevronLeft, ChevronRight, Clock, Filter, Search } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Filter, Search } from 'lucide-react';
 import './events.css'; // Import the CSS file
+import ISCEvents from './ISC_events.json';
 
-// Extended sample event data with more variety and random dates
-const sampleEvents = [
-  {
-    id: 1,
-    title: "Annual Basketball Tournament",
-    date: "2025-05-26",
-    time: "09:00",
-    sport: "Basketball",
-    description: "Annual inter-college basketball championship",
-    location: "Main Sports Hall"
-  },
-  {
-    id: 2,
-    title: "Swimming Meet",
-    date: "2025-05-27",
-    time: "14:00",
-    sport: "Swimming",
-    description: "Regional swimming competition",
-    location: "Aquatics Center"
-  },
-  {
-    id: 3,
-    title: "Sports Council General Meeting",
-    date: "2025-05-28",
-    time: "16:00",
-    sport: "Council",
-    description: "Quarterly meeting for all sports representatives",
-    location: "Conference Room B"
-  },
-  {
-    id: 4,
-    title: "Football Tryouts",
-    date: "2025-05-29",
-    time: "08:00",
-    sport: "Football",
-    description: "Team selection for the upcoming season",
-    location: "Main Field"
-  },
-  {
-    id: 5,
-    title: "Tennis Tournament Finals",
-    date: "2025-05-30",
-    time: "10:00",
-    sport: "Tennis",
-    description: "Singles and doubles tournament finals",
-    location: "Tennis Courts"
-  },
-  {
-    id: 6,
-    title: "Volleyball Practice",
-    date: "2025-05-26",
-    time: "18:00",
-    sport: "Volleyball",
-    description: "Weekly team practice session",
-    location: "Indoor Court"
-  },
-  {
-    id: 7,
-    title: "Cricket Championship Semi-Final",
-    date: "2025-06-02",
-    time: "11:00",
-    sport: "Cricket",
-    description: "Semi-final match of annual tournament",
-    location: "Cricket Ground"
-  },
-  {
-    id: 8,
-    title: "Badminton Club Meeting",
-    date: "2025-06-03",
-    time: "17:00",
-    sport: "Badminton",
-    description: "Monthly club meeting and practice",
-    location: "Badminton Hall"
-  },
-  {
-    id: 9,
-    title: "Table Tennis Workshop",
-    date: "2025-06-04",
-    time: "15:00",
-    sport: "Table Tennis",
-    description: "Skills development workshop for beginners",
-    location: "Recreation Center"
-  },
-  {
-    id: 10,
-    title: "Athletics Training",
-    date: "2025-06-05",
-    time: "07:00",
-    sport: "Athletics",
-    description: "Morning track and field training session",
-    location: "Athletics Stadium"
-  },
-  {
-    id: 11,
-    title: "Boxing Championship Qualifier",
-    date: "2025-06-06",
-    time: "19:00",
-    sport: "Boxing",
-    description: "Qualifying rounds for championship",
-    location: "Boxing Arena"
-  },
-  {
-    id: 12,
-    title: "Gymnastics Exhibition",
-    date: "2025-06-07",
-    time: "13:00",
-    sport: "Gymnastics",
-    description: "Student showcase and performance",
-    location: "Gymnastics Hall"
-  },
-  {
-    id: 13,
-    title: "Wrestling Tournament",
-    date: "2025-06-09",
-    time: "12:00",
-    sport: "Wrestling",
-    description: "Inter-college wrestling championship",
-    location: "Wrestling Arena"
-  },
-  {
-    id: 14,
-    title: "Archery Competition",
-    date: "2025-06-10",
-    time: "09:30",
-    sport: "Archery",
-    description: "Precision shooting competition",
-    location: "Archery Range"
-  },
-  {
-    id: 15,
-    title: "Hockey League Match",
-    date: "2025-06-11",
-    time: "16:30",
-    sport: "Hockey",
-    description: "Regular season league match",
-    location: "Hockey Field"
-  },
-  {
-    id: 16,
-    title: "Sports Medicine Seminar",
-    date: "2025-06-12",
-    time: "14:30",
-    sport: "Council",
-    description: "Health and fitness awareness session",
-    location: "Medical Center"
-  },
-  {
-    id: 17,
-    title: "Swimming Training Camp",
-    date: "2025-06-13",
-    time: "06:00",
-    sport: "Swimming",
-    description: "Intensive training for competitive swimmers",
-    location: "Aquatics Center"
-  },
-  {
-    id: 18,
-    title: "Basketball Skills Clinic",
-    date: "2025-06-14",
-    time: "10:30",
-    sport: "Basketball",
-    description: "Fundamental skills development session",
-    location: "Practice Court"
-  },
-  {
-    id: 19,
-    title: "Football Friendly Match",
-    date: "2025-06-16",
-    time: "17:00",
-    sport: "Football",
-    description: "Exhibition match with visiting team",
-    location: "Main Field"
-  },
-  {
-    id: 20,
-    title: "Tennis Coaching Session",
-    date: "2025-06-17",
-    time: "08:30",
-    sport: "Tennis",
-    description: "Professional coaching for advanced players",
-    location: "Tennis Courts"
-  },
-  {
-    id: 21,
-    title: "Badminton Tournament Quarter Finals",
-    date: "2025-06-18",
-    time: "15:00",
-    sport: "Badminton",
-    description: "Quarter final matches for tournament",
-    location: "Badminton Hall"
-  },
-  {
-    id: 22,
-    title: "Table Tennis League",
-    date: "2025-06-19",
-    time: "17:30",
-    sport: "Table Tennis",
-    description: "Weekly league matches",
-    location: "Recreation Center"
-  },
-  {
-    id: 23,
-    title: "Athletics Track Meet",
-    date: "2025-06-20",
-    time: "08:00",
-    sport: "Athletics",
-    description: "Sprint and distance events",
-    location: "Athletics Stadium"
-  },
-  {
-    id: 24,
-    title: "Boxing Training Session",
-    date: "2025-06-21",
-    time: "18:00",
-    sport: "Boxing",
-    description: "Technical skills training",
-    location: "Boxing Arena"
-  },
-  {
-    id: 25,
-    title: "Gymnastics Team Practice",
-    date: "2025-06-23",
-    time: "16:00",
-    sport: "Gymnastics",
-    description: "Team coordination and routine practice",
-    location: "Gymnastics Hall"
-  },
-  {
-    id: 26,
-    title: "Wrestling Workshop",
-    date: "2025-06-24",
-    time: "14:00",
-    sport: "Wrestling",
-    description: "Techniques and conditioning workshop",
-    location: "Wrestling Arena"
-  },
-  {
-    id: 27,
-    title: "Archery Practice",
-    date: "2025-06-25",
-    time: "10:00",
-    sport: "Archery",
-    description: "Target practice and form improvement",
-    location: "Archery Range"
-  },
-  {
-    id: 28,
-    title: "Hockey Skills Development",
-    date: "2025-06-26",
-    time: "16:00",
-    sport: "Hockey",
-    description: "Stick handling and shooting practice",
-    location: "Hockey Field"
-  },
-  {
-    id: 29,
-    title: "Sports Council Awards Ceremony",
-    date: "2025-06-27",
-    time: "19:00",
-    sport: "Council",
-    description: "Annual recognition ceremony",
-    location: "Main Auditorium"
-  },
-  {
-    id: 30,
-    title: "Volleyball Championship Finals",
-    date: "2025-06-28",
-    time: "13:00",
-    sport: "Volleyball",
-    description: "Championship final match",
-    location: "Indoor Court"
+// Helper to parse "DD MM YYYY" or "DD MM YYYY to DD MM YYYY"
+function getDates(standardizedDate) {
+  if (!standardizedDate) return [];
+  if (standardizedDate.includes('to')) {
+    const [start, end] = standardizedDate.split('to').map(s => s.trim());
+    return [start, end];
   }
-];
+  // Ignore "full month", "last week", etc. for now
+  if (standardizedDate.match(/^\d{2} \d{2} \d{4}$/)) {
+    return [standardizedDate.trim()];
+  }
+  return [];
+}
 
-// Full list of sports
-const allSports = [
-  "Basketball", "Swimming", "Football", "Tennis", "Cricket", 
-  "Volleyball", "Hockey", "Badminton", "Table Tennis", 
-  "Athletics", "Boxing", "Gymnastics", "Wrestling", "Archery", "Council"
-];
+// Helper to generate all dates in a range
+function getDateRange(start, end) {
+  const result = [];
+  let current = new Date(start);
+  const last = new Date(end);
+  while (current <= last) {
+    result.push(new Date(current));
+    current.setDate(current.getDate() + 1);
+  }
+  return result;
+}
+
+// Transform ISCEvents JSON to calendar event objects
+function parseISCEvents(json) {
+  let id = 1;
+  const events = [];
+
+  json.forEach(item => {
+    const dates = getDates(item.StandardizedDate);
+    if (dates.length === 2) {
+      // Range
+      const [startStr, endStr] = dates;
+      const [sd, sm, sy] = startStr.split(' ').map(Number);
+      const [ed, em, ey] = endStr.split(' ').map(Number);
+      const start = new Date(sy, sm - 1, sd);
+      const end = new Date(ey, em - 1, ed);
+      getDateRange(start, end).forEach(dateObj => {
+        events.push({
+          id: id++,
+          title: item.Event,
+          date: dateObj.toISOString().split('T')[0],
+          sport: item.Sport,
+          description: item.Event
+        });
+      });
+    } else if (dates.length === 1) {
+      // Single date
+      const [d, m, y] = dates[0].split(' ').map(Number);
+      if (!isNaN(d) && !isNaN(m) && !isNaN(y)) {
+        const dateObj = new Date(y, m - 1, d);
+        events.push({
+          id: id++,
+          title: item.Event,
+          date: dateObj.toISOString().split('T')[0],
+          sport: item.Sport,
+          description: item.Event
+        });
+      }
+    }
+    // Ignore "full month", "last week", etc.
+  });
+
+  return events;
+}
+
+// Full list of sports (dynamically from ISCEvents)
+const allSports = Array.from(new Set(ISCEvents.map(e => e.Sport))).filter(Boolean).sort();
 
 const sportColors = {
   "Basketball": "#f97316",
@@ -298,7 +90,16 @@ const sportColors = {
   "Gymnastics": "#d946ef",
   "Wrestling": "#7c3aed",
   "Archery": "#059669",
-  "Council": "#6366f1"
+  "Council": "#6366f1",
+  "Board Games": "#a3a3a3",
+  "Weightlifting": "#b91c1c",
+  "Squash": "#0ea5e9",
+  "Indian Games": "#f43f5e",
+  "Common Council": "#6366f1",
+  "Common": "#6366f1",
+  "Lawn Tennis": "#eab308",
+  "LT": "#eab308",
+  "TT": "#ef4444"
 };
 
 export default function SportsCalendar() {
@@ -308,10 +109,11 @@ export default function SportsCalendar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentWeekStart, setCurrentWeekStart] = useState(new Date());
 
-  // Simulating data fetch
+  // Load events from ISCEvents
   useEffect(() => {
-    setEvents(sampleEvents);
-    setFilteredEvents(sampleEvents);
+    const parsed = parseISCEvents(ISCEvents);
+    setEvents(parsed);
+    setFilteredEvents(parsed);
   }, []);
 
   // Get start of week (Sunday)
@@ -339,8 +141,7 @@ export default function SportsCalendar() {
       const term = searchTerm.toLowerCase();
       result = result.filter(event => 
         event.title.toLowerCase().includes(term) ||
-        event.description.toLowerCase().includes(term) ||
-        event.location.toLowerCase().includes(term)
+        event.description.toLowerCase().includes(term)
       );
     }
     
@@ -359,25 +160,10 @@ export default function SportsCalendar() {
     });
   };
 
-  // Generate week days
-  const getWeekDays = () => {
-    const days = [];
-    const weekStart = new Date(currentWeekStart);
-    
-    for (let i = 0; i < 7; i++) {
-      const day = new Date(weekStart);
-      day.setDate(weekStart.getDate() + i);
-      days.push(day);
-    }
-    
-    return days;
-  };
-
   // Get events for specific day
   const getDayEvents = (date) => {
     const dateString = date.toISOString().split('T')[0];
-    return getWeekEvents().filter(event => event.date === dateString)
-      .sort((a, b) => a.time.localeCompare(b.time));
+    return getWeekEvents().filter(event => event.date === dateString);
   };
 
   // Navigate weeks
@@ -405,12 +191,18 @@ export default function SportsCalendar() {
     });
   };
 
-  const formatTime = (time) => {
-    return new Date(`2000-01-01T${time}`).toLocaleTimeString('en-US', {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true
-    });
+  // Generate week days
+  const getWeekDays = () => {
+    const days = [];
+    const weekStart = new Date(currentWeekStart);
+    
+    for (let i = 0; i < 7; i++) {
+      const day = new Date(weekStart);
+      day.setDate(weekStart.getDate() + i);
+      days.push(day);
+    }
+    
+    return days;
   };
 
   const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
@@ -519,16 +311,8 @@ export default function SportsCalendar() {
                         className="sports-event-card"
                         style={{ borderLeftColor: sportColors[event.sport] }}
                       >
-                        <div className="sports-event-time">
-                          <Clock size={12} />
-                          {formatTime(event.time)}
-                        </div>
                         <div className="sports-event-title">{event.title}</div>
                         <div className="sports-event-details">
-                          <div className="sports-event-location">
-                            <MapPin size={12} />
-                            {event.location}
-                          </div>
                           <div 
                             className="sports-event-sport-badge"
                             style={{ 
@@ -543,29 +327,27 @@ export default function SportsCalendar() {
                           {event.description}
                         </div>
                       </div>
-                    ))
-                  )}
+                    )))
+                  }
                 </div>
               </div>
             );
           })}
         </div>
-
         {/* Legend */}
         <div className="sports-legend">
           <div className="sports-legend-title">Sport Categories</div>
-         <div className="sports-legend-items">
-          {allSports.map(sport => (
-          <div key={sport} className="sports-legend-item">
-        <div 
-          className="sports-legend-color"
-          style={{ backgroundColor: sportColors[sport] }}
-        ></div>
-        <span style={{ color: 'black' }}>{sport}</span>
-      </div>
-   ))}
-        </div>
-
+          <div className="sports-legend-items">
+            {allSports.map(sport => (
+              <div key={sport} className="sports-legend-item">
+                <div 
+                  className="sports-legend-color"
+                  style={{ backgroundColor: sportColors[sport] }}
+                ></div>
+                <span style={{ color: 'black' }}>{sport}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

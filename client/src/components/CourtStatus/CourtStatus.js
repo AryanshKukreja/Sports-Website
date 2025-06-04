@@ -330,7 +330,7 @@ const CourtStatus = () => {
 
       {/* Facility Map */}
       <div className="cs-facility-map-container" style={{ color: 'black' }}>
-        <h2 style={{color:'#3CB371', fontSize:"1.9rem"}}>IITB Sports Facilities Map</h2>
+        <h2 style={{color:'#3CB371', fontSize:"4.5vw"}}>IITB Sports Facilities Map</h2>
         <div className="cs-map-controls">
           {isEditingMap && (
             <>
@@ -354,10 +354,10 @@ const CourtStatus = () => {
           ref={mapRef}
           onClick={handleMapClick}
           style={{
-            position: 'relative',
+            /* position: 'relative',
             width: '800px',
             height: '500px',
-            margin: '0 auto',
+            margin: '0 auto', */
             backgroundImage: `url(${mapImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',

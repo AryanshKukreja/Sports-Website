@@ -270,6 +270,16 @@
 
 .cs-facility-map-container {
   color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cs-facility-map{
+  position: relative;
+  width: 70vw;
+  height: 50vw;
+  margin: '0 auto';
 }
 
 /* Footer */

@@ -25,25 +25,25 @@ const Navbar = () => {
         </div>
         <div className="menu">
           <ul >
-            <li>
+            <li className='menuItem'>
               <a href="/sports">Home</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/explore">Sports</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/CourtStatus">CourtStatus</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/GC">GC</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/events-timeline">EventsTimeLine</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/turfbooking">TurfBooking</a>
             </li>
-            <li>
+            <li className='menuItem'>
               <a href="/sports/contact">Contact Us</a>
             </li>
           </ul>

@@ -78,10 +78,12 @@
 .aboutimg {
     /* width: 25vw;
     height: 50vh; */
-    margin-top: 10vh;
+    margin-top: 0vh;
     width: 30%;
     border-radius: 5%;
+    max-width: 450px;
 }
+
 
 .about---text{
     text-align: start;
@@ -108,7 +110,7 @@
 }
 .blackCats{
     width: 100vw;
-    height: 90vh;
+    height: auto;
     margin-bottom: 10vh;
     margin: 0px;
     display: flex;
@@ -118,8 +120,9 @@
 }
 
 .sportApp{
+    min-height: 600px;
     width: 100vw;
-    height: 70vh;
+    height: auto;
     margin: 0px;
     display: flex;
     flex-wrap: wrap;
@@ -167,7 +170,7 @@ video{
     }
 
     .blackCats{
-        height: 60vh;
+        height: auto;
     }
 
     #catimg{
@@ -179,8 +182,8 @@ video{
     }
 
     .sportApp{
-        padding-top: 20vh;
-        height:90vh;
+        padding-top: 10vh;
+        height:auto;
         padding-bottom: 15vh;
     }
 
@@ -220,10 +223,10 @@ video{
     }
 
     .blackCats{
-        height: 80vh;
+        height: auto;
     }
     .sportApp{
-        height: 85vh;
+        height: auto;
         padding-bottom: 10vh;
     }
 
@@ -303,7 +306,8 @@ video{
     }
     .aboutimg{
         left: 3rem;
-        width: 50vw;
+        height: 50%;
+        width: 50%;
         align-items: center;
         margin-left: 4vh;
     }
@@ -323,7 +327,7 @@ video{
         font-size: 2rem;
     }
     .sportApp{
-        height: 125vh;
+        height: auto;
         padding-bottom: 120px;
     }
     .vid{
@@ -355,7 +359,6 @@ video{
         margin-top: 1vh;
         width: 80%;
         border-radius: 5%;
-        height:35vh;
         margin-bottom: 3vh;
         margin-right: 4vh;
     }
@@ -365,8 +368,8 @@ video{
         height: 50vh; */
         margin-top: 1vh;
         width: 80%;
+        height:auto;
         border-radius: 5%;
-        height:35vh;
         margin-bottom: 3vh;
         margin-right: 2vh;
     }

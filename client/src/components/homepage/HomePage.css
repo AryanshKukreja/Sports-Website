@@ -1,11 +1,12 @@
 .content-page {
+    width: 100vw;
     background-color: #13133F;
 }
 /* Fullscreen container */
 .bg-container {
     position: relative;
     height: 100vh; /* Fullscreen height */
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
   }
   

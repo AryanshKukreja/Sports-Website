@@ -267,7 +267,9 @@ export default function SportsCalendar() {
         <div className="sports-calendar-nav">
           <div className="sports-nav-controls">
             <button onClick={goToPreviousWeek} className="sports-nav-button">
-              <ChevronLeft size={18} />
+              <div className='chevron'>
+                <ChevronLeft size={18} />
+              </div>
               Previous Week
             </button>
             
@@ -277,7 +279,9 @@ export default function SportsCalendar() {
             
             <button onClick={goToNextWeek} className="sports-nav-button">
               Next Week
-              <ChevronRight size={18} />
+              <div className='chevron'>
+                <ChevronRight size={18} />
+              </div>
             </button>
           </div>
           

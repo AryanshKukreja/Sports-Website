@@ -403,3 +403,49 @@
     min-height: 300px;
   }
 }
+@media (max-width: 572px) {
+  .sports-calendar-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .sports-calendar-title {
+    font-size: 2.5rem;
+  }
+  
+  .sports-calendar-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sports-filter-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sports-filter-item {
+    min-width: auto;
+  }
+  
+  .sports-calendar-nav {
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+  }
+  .sports-nav-controls{
+    flex-direction: row;
+  }
+  .sports-nav-button, .sports-today-button{
+    margin: 0;
+    max-width: 25vw;
+    font-size: 3vw;
+    text-align: center;
+  }
+  .sports-nav-button .chevron {
+    display: none;
+  }
+  .sports-day-column {
+    min-height: 300px;
+  }
+}

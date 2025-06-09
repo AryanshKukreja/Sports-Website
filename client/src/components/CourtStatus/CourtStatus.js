@@ -370,8 +370,8 @@ const CourtStatus = () => {
               className="cs-map-marker selected"
               style={{
                 position: 'absolute',
-                left: `${sportsCoordinates[selectedSport].coords.x}px`,
-                top: `${sportsCoordinates[selectedSport].coords.y}px`,
+                left: `${sportsCoordinates[selectedSport].coords.x/8}%`,
+                top: `${sportsCoordinates[selectedSport].coords.y/5}%`,
                 transform: 'translate(-50%, -50%)',
                 width: '24px',
                 height: '24px',

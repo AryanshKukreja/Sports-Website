@@ -9,7 +9,7 @@ const SPORTS_COORDINATES_BY_NAME = {
   Volleyball:    { coords: { x: 330, y: 100 }, color: '#4CAF50' },
   Basketball:    { coords: { x: 260, y: 120 }, color: '#2196F3' },
   Squash:        { coords: { x: 300, y: 400 }, color: '#00BCD4' },
-  TableTennis:   { coords: { x: 360, y: 420 }, color: '#FFC107' },
+  "Table Tennis":   { coords: { x: 360, y: 420 }, color: '#FFC107' },
   Cricket:       { coords: { x: 80, y: 130 }, color: '#9C27B0' },
 };
 
@@ -33,7 +33,7 @@ const generateOneHourTimeSlots = () => {
 };
 const MANUAL_TIME_SLOTS = generateOneHourTimeSlots();
 
-const API_BASE_URL = 'https://booking-backend-1-el9h.onrender.com';
+const API_BASE_URL = 'http://127.0.0.1:8000';
 
 const CourtStatus = () => {
   const [sports, setSports] = useState([]);

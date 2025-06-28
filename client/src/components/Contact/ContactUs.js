@@ -6,7 +6,6 @@ import './page.css';
 const ContactUs = () => {
     return(
         <div className="block">
-        <ContactMe />
         {/* <h2 className="insti">Student Affairs Council(SAC)</h2>
         <p>
             <span className="mail"><img src=".svg" width='30px' alt='img'/>sac email id</span>  

@@ -1,327 +1,494 @@
-/* CourtStatus.css */
+/* Import matching font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
-:root {
-  --primary-color: #1a3a6a;
-  --secondary-color: #2c5697;
-  --accent-color: #448ef6;
-  --light-bg: #f8f9fa;
-  --dark-bg: #ebeef2;
-  --border-color: #d1d5db;
-  
-  --available-color: #10b981;
-  --booked-color: #ef4444;
-  --maintenance-color: #f59e0b;
-  
-  --header-height: 120px;
-  --footer-height: 60px;
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Main Container */
 .court-status-container {
-  font-family: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  min-height: 100vh;
+  color: #1a202c;
+  padding: 2rem 0;
 }
 
-/* Header */
+/* Header Section */
 .cs-header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
 }
 
 .cs-header h1 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-  margin-top: 1rem;
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #4299e1 0%, #667eea 50%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .cs-date-display {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
-.cs-date {
-  font-size: 0.875rem;
-  opacity: 0.9;
-}
-
-.cs-time {
-  font-size: 1.25rem;
+.cs-date, .cs-time {
+  background: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3748;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 /* Sport Tabs */
 .cs-sport-tabs {
   display: flex;
-  overflow-x: auto;
-  background-color: var(--secondary-color);
-  border-bottom: 1px solid var(--border-color);
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
 }
 
 .cs-sport-tab {
-  padding: 1rem 0.5rem;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.7);
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1rem 2rem;
   cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-  border-bottom: 3px solid transparent;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  color: #4a5568;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
 }
 
 .cs-sport-tab:hover {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  border-color: #4299e1;
 }
 
 .cs-sport-tab.active {
+  background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
   color: white;
-  border-bottom: 3px solid var(--accent-color);
-  background-color: rgba(0, 0, 0, 0.2);
-  size:2rem;
+  border-color: #4299e1;
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
 }
 
-.cs-sport-icon {
-  font-size: 1.2rem;
+.cs-sport-name {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+}
+
+/* Facility Map Container */
+.cs-facility-map-container {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.cs-facility-map-container h2 {
+  font-size: 2.5rem !important;
+  font-weight: 800;
+  color: #2d3748 !important;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cs-map-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.cs-map-control-btn {
+  background: white;
+  border: 2px solid #4299e1;
+  color: #4299e1;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cs-map-control-btn:hover {
+  background: #4299e1;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(66, 153, 225, 0.3);
+}
+
+/* Facility Map */
+.cs-facility-map {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 3px solid #e2e8f0;
+}
+
+.cs-map-marker {
+  transition: all 0.3s ease;
+}
+
+.cs-map-marker:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.8), 0 0 0 6px #000000;
+}
+
+.cs-map-edit-info {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Date Input */
+input[type="date"] {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+input[type="date"]:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
 }
 
 /* Legend */
 .cs-legend {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
-  background-color: var(--light-bg);
-  border-bottom: 1px solid var(--border-color);
-  color: black;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 0 2rem;
 }
 
 .cs-legend-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
-  color: black;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .cs-legend-color {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .cs-legend-color.available {
-  background-color: var(--available-color);
+  background: linear-gradient(135deg, #48bb78, #38a169);
 }
 
 .cs-legend-color.booked {
-  background-color: var(--booked-color);
+  background: linear-gradient(135deg, #f56565, #e53e3e);
 }
 
 .cs-legend-color.maintenance {
-  background-color: var(--maintenance-color);
+  background: linear-gradient(135deg, #ed8936, #dd6b20);
+}
+
+.cs-legend-item span {
+  font-weight: 600;
+  color: #2d3748 !important;
 }
 
 /* Table Container */
 .cs-table-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
   overflow-x: auto;
-  position: relative;
-  min-height: 300px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* Loading */
+/* Loading State */
 .cs-loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: var(--primary-color);
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #4a5568;
 }
 
 .cs-spinner {
-  width: 40px;
-  height: 40px;
-  border: 4px solid rgba(0, 0, 0, 0.1);
-  border-left-color: var(--accent-color);
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e2e8f0;
+  border-top: 4px solid #4299e1;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin-bottom: 1rem;
+  margin: 0 auto 1rem;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Table */
+/* Table Styles */
 .cs-table {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
 }
 
 .cs-table th,
 .cs-table td {
-  padding: 0.75rem;
+  padding: 1rem 0.75rem;
   text-align: center;
-  border: 1px solid var(--border-color);
-  color: black;
+  border: 1px solid #e2e8f0;
+  position: relative;
 }
 
-.cs-table thead th {
-  background-color: var(--dark-bg);
+.cs-table th {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  font-weight: 700;
+  color: #2d3748 !important;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   position: sticky;
   top: 0;
   z-index: 10;
-  font-weight: 600;
-  color: black;
 }
 
 .cs-court-column {
+  background: linear-gradient(135deg, #4299e1 0%, #667eea 100%) !important;
+  color: white !important;
+  font-weight: 800;
+  min-width: 150px;
   position: sticky;
   left: 0;
-  z-index: 20;
-  background-color: var(--dark-bg);
-  min-width: 120px;
-  text-align: left;
-}
-
-.cs-time-column {
-  min-width: 90px;
-  white-space: nowrap;
-}
-
-.cs-time-column.current-time {
-  background-color: rgba(68, 142, 246, 0.2);
-  box-shadow: inset 0 -3px 0 var(--accent-color);
-}
-
-.cs-time-column.past-time {
-  color: #6b7280;
+  z-index: 11;
 }
 
 .cs-court-name {
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  font-weight: 700;
+  color: #2d3748;
   position: sticky;
   left: 0;
-  background-color: white;
-  z-index: 10;
-  font-weight: 500;
-  text-align: left;
+  z-index: 9;
+  border-right: 2px solid #4299e1;
 }
 
-/* Slot Styling */
+.cs-time-column {
+  min-width: 80px;
+  writing-mode: horizontal-tb;
+}
+
+.cs-time-column.current-time {
+  background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%) !important;
+  color: white !important;
+  font-weight: 800;
+}
+
+.cs-time-column.past-time {
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%) !important;
+  color: #718096 !important;
+}
+
+/* Slot Styles */
 .cs-slot {
   cursor: pointer;
-  transition: transform 0.15s ease;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  min-width: 80px;
+  height: 60px;
+  position: relative;
 }
 
 .cs-slot:hover {
   transform: scale(1.05);
   z-index: 5;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .cs-slot.available {
-  background-color: var(--available-color);
+  background: linear-gradient(135deg, #c6f6d5 0%, #9ae6b4 100%);
+  color: #22543d;
+  border-color: #48bb78;
 }
 
 .cs-slot.booked {
-  background-color: var(--booked-color);
+  background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+  color: #742a2a;
+  border-color: #f56565;
 }
 
 .cs-slot.maintenance {
-  background-color: var(--maintenance-color);
+  background: linear-gradient(135deg, #feebc8 0%, #fbd38d 100%);
+  color: #7b341e;
+  border-color: #ed8936;
 }
 
 .cs-slot.unknown {
-  background-color: #9ca3af;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+  color: #4a5568;
+  border-color: #a0aec0;
 }
 
 .cs-slot.current-time {
-  box-shadow: inset 0 0 0 3px rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffd700 !important;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
 .cs-status-indicator {
-  color: white;
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-
-.cs-facility-map-container {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cs-facility-map{
-  position: relative;
-  width: 70vw;
-  height: 50vw;
-  margin: '0 auto';
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 /* Footer */
 .cs-footer {
-  background-color: var(--light-bg);
-  padding: 1rem;
   text-align: center;
-  color: #4b5563;
-  font-size: 0.875rem;
-  border-top: 1px solid var(--border-color);
-  height: 6rem;
+  margin-top: 3rem;
+  padding: 2rem;
+  color: #4a5568;
+  font-weight: 500;
 }
 
-.cs-facility-info {
-  margin-top: 0.5rem;
-  font-style: italic;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .cs-header h1 {
+    font-size: 2.8rem;
+  }
+  
+  .cs-facility-map-container h2 {
+    font-size: 2rem !important;
+  }
 }
 
-.cs-map.controls{
-  color: black;
-}
-/* Responsive */
 @media (max-width: 768px) {
-  .cs-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .court-status-container {
+    padding: 1rem 0;
+  }
+  
+  .cs-header h1 {
+    font-size: 2.2rem;
   }
   
   .cs-date-display {
-    align-items: flex-start;
-    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .cs-sport-tabs {
+    gap: 0.5rem;
+  }
+  
+  .cs-sport-tab {
+    padding: 0.75rem 1.5rem;
+    min-width: 100px;
+  }
+  
+  .cs-facility-map {
+    height: 300px;
   }
   
   .cs-legend {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
-  button{
-    width:auto;
+  
+  .cs-table-container {
+    margin: 0 1rem;
+  }
+  
+  .cs-table th,
+  .cs-table td {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .cs-slot {
+    min-width: 60px;
+    height: 50px;
   }
 }
 
-.cs-time-column {
-  color: black;
+@media (max-width: 480px) {
+  .cs-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .cs-sport-tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .cs-facility-map {
+    height: 250px;
+  }
+  
+  .cs-table th,
+  .cs-table td {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.75rem;
+  }
+  
+  .cs-status-indicator {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility */
+.cs-slot:focus {
+  outline: 3px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .court-status-container {
+    background: white !important;
+  }
+  
+  .cs-map-controls,
+  .cs-footer {
+    display: none;
+  }
 }

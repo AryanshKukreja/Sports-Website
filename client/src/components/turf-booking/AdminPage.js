@@ -4,10 +4,10 @@ import './AdminPage.css';
 const AdminPage = () => {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [enteredPassword, setEnteredPassword] = useState(''); // To store the entered password
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // To store authentication status
+  const [enteredPassword, setEnteredPassword] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const correctPassword = 'RAJIFS@2024'; // Set your desired password here
+  const correctPassword = 'RAJIFS@2024';
 
   // Array to map slot numbers to corresponding timings
   const slotTimings = [
@@ -53,7 +53,7 @@ const AdminPage = () => {
         const filteredRequests = data.filter(
           (request) => request.date === todayDate || request.date === tomorrowDate
         );
-        setRequests(filteredRequests); // Set filtered requests
+        setRequests(filteredRequests);
       } catch (error) {
         console.error('Error fetching data:', error);
       } finally {
@@ -97,7 +97,7 @@ const AdminPage = () => {
 
   if (!isAuthenticated) {
     return (
-      <div>
+      <div className="admin-page-container">
         <h1>Admin Login</h1>
         <form onSubmit={handlePasswordSubmit}>
           <label htmlFor="password">Enter Password:</label>
@@ -116,11 +116,15 @@ const AdminPage = () => {
   }
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="admin-page-container">
+        <div>Loading...</div>
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className="admin-page-container">
       <h1>Booking Requests (Today & Tomorrow)</h1>
       <ul>
         {requests && requests.length > 0 ? (
@@ -131,12 +135,10 @@ const AdminPage = () => {
               <p><strong>Roll No:</strong> {request.rollno}</p>
               <p><strong>No. of Players:</strong> {request.no_of_players}</p>
               <p><strong>Player Roll Nos:</strong> {request.player_roll_no || 'N/A'}</p>
-              <p><strong>Date:</strong> {request.date}</p> {/* Display date */}
+              <p><strong>Date:</strong> {request.date}</p>
               <p><strong>Status:</strong> {request.status}</p>
-              {/* Display slot number and corresponding timing */}
               <p><strong>Slot Time:</strong> {slotTimings[request.slot - 1]}</p>
 
-              {/* Accept and Reject buttons */}
               {request.status === 'pending' && (
                 <div>
                   <button

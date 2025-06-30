@@ -17,7 +17,7 @@ body {
 }
 
 /* Page Header */
-h1 {
+.football-turf-heading {
   font-size: 3.5rem;
   font-weight: 900;
   text-align: center;
@@ -30,7 +30,7 @@ h1 {
   position: relative;
 }
 
-h1::after {
+.football-turf-heading::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -43,7 +43,9 @@ h1::after {
 }
 
 /* Section Headers */
-h2 {
+.football-turf-today-slots,
+.football-turf-tomorrow-slots,
+.booking-form-heading {
   font-size: 2rem;
   font-weight: 700;
   color: #2d3748;
@@ -55,7 +57,7 @@ h2 {
   background-clip: text;
 }
 
-h4 {
+.slots-note {
   font-size: 1.1rem;
   color: #e53e3e;
   text-align: center;

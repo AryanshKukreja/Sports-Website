@@ -28,7 +28,7 @@ function Sports() {
 
   return (
     <div className="sports-container">
-      <h1>Sports</h1>
+      <h1 className='sports-heading'>Sports</h1>
       <p>Welcome to the Sports page! Here are some popular sports and clubs at IIT Bombay:</p>
 
       <div className="sports-list">

@@ -22,6 +22,10 @@ footer{
     align-items: center;
 }
 
+.footer{
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
 .footerdiv{
     display: flex;
     justify-content: space-between;
@@ -122,8 +126,7 @@ h3{
 
 .copyright{
     font-size: 20px;
-    margin-bottom: 15px;
     text-align: center;
-    color: #B4B3FC;
+    color: #4a5568;
 }
 

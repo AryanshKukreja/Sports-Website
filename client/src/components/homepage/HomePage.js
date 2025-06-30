@@ -6,6 +6,12 @@ import abim from "./assets/logodark.png";
 // import appvid from './assets/appvid.mp4'
 // import bcat from '../assets/blackcats.png';
 import blackcat from './assets/bcatlogo.png'
+import transparentSportsLogo from './assets/sports-logo-transparent.png';
+import sportsApp1 from './assets/App-animation/sports_app_1.png';
+import sportsApp2 from './assets/App-animation/sports_app_2.png';
+import sportsApp3 from './assets/App-animation/sports_app_3.png';
+import sportsApp4 from './assets/App-animation/sports_app_4.png';
+import sportsApp5 from './assets/App-animation/sports_app_5.png';
 // import { BsApp } from 'react-icons/bs';
 import './HomePage.css';
 
@@ -22,14 +28,14 @@ export const HomePage = () => {
             </div>
 
             <div className='about'>
-                <img src={abim} className='aboutimg' alt='abim'/>
+                <img src={transparentSportsLogo} className='aboutimg aboutusimg' alt='abim'/>
                 <div>
                     <div className='aboutus'>
                         <h4>About Us</h4>
                     </div>
                     <div className='aboutText'>
                         <br />
-                        <p>IIT Bombay boasts a vibrant sports scene that keeps students active throughout the year. The institute's calendar is packed with exciting events, ranging from the inter-hostel General Championships to the prestigious Inter-IIT competitions. 
+                        <p className='about-text-para'>IIT Bombay boasts a vibrant sports scene that keeps students active throughout the year. The institute's calendar is packed with exciting events, ranging from the inter-hostel General Championships to the prestigious Inter-IIT competitions. 
                            To nurture this competitive spirit and provide students with the opportunity to pursue their athletic passions, IIT Bombay offers state-of-the-art sports facilities. From basketball and volleyball courts to a swimming pool, football ground, and cricket ground, the
                            institute caters to a wide range of sporting interests. This commitment extends beyond facilities, with students and faculty alike demonstrating a dedication to honing their skills and fostering strong bonds through sportsmanship.</p>
                         <h4 className='slogan'>Until.&nbsp;&nbsp;&nbsp;&nbsp;Victory.&nbsp;&nbsp;&nbsp;&nbsp; Always.</h4>
@@ -56,18 +62,23 @@ export const HomePage = () => {
 
 
             <div className='sportApp'>
-                {/* <video className="vid" src={appvid} autoPlay muted loop /> */}
-                <div>
+                <div className='appImages' id='sportsAppUI'>
+                    <img src={sportsApp1} className='sportsimage fade-img' alt='sports app 1' />
+                    <img src={sportsApp2} className='sportsimage fade-img' alt='sports app 2' />
+                    <img src={sportsApp3} className='sportsimage fade-img' alt='sports app 3' />
+                    <img src={sportsApp4} className='sportsimage fade-img' alt='sports app 4' />
+                    <img src={sportsApp5} className='sportsimage fade-img' alt='sports app 5' />
+                </div>
+                <div className='sportApp-content'>
                     <div className='aboutus' id="sportsapp">
                         <h4>Sports App </h4>
                     </div>
                     <div className='apptext'>
                         <br />
-                        {/* Stay connected with IIT Bombay sports! Download our Sports App, now available for both Android and iOS. 
-                        Click here for more details and to download.
-                        Join now to unlock a world of sports news, exclusive content, and a thriving community.  */}
-                        (Andriod + iOS)<br></br><br></br>
-                        Launching Soon... 
+                        (Andriod + iOS)<br /><br />
+                        <div className='app-slogan'>
+                        Launching Soon...
+                        </div>
                     </div>
                 </div>
             </div>

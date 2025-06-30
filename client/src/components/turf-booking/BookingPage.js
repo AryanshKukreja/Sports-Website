@@ -170,11 +170,11 @@ const BookingPage = () => {
 
   return (
     <div>
-      <h1>Football Turf Booking</h1>
+      <h1 className='football-turf-heading'>Football Turf Booking</h1>
 
       {/* Today's Slots */}
-      <h2>Today's Slots ({new Date().toLocaleDateString()}) - Display Only</h2>
-      <h4>Note : Slots can only be booked for Tomorrow</h4>
+      <h2 className='football-turf-today-slots'>Today's Slots ({new Date().toLocaleDateString()}) - Display Only</h2>
+      <h4 className='slots-note'>Note : Slots can only be booked for Tomorrow</h4>
       <div className="slots">
         {availableSlots
           .filter((slot) => slot.date === todayDate)
@@ -196,7 +196,7 @@ const BookingPage = () => {
 
       
 
-      <h2>Booking Form</h2>
+      <h2 className='booking-form-heading'>Booking Form</h2>
       <form className="booking-form" onSubmit={handleFormSubmit}>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
@@ -274,7 +274,7 @@ const BookingPage = () => {
           />
         </div>
         {/* Tomorrow's Slots */}
-      <h2>Available Slots for Tomorrow ({new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })})</h2>
+      <h2 className='football-turf-tomorrow-slots'>Available Slots for Tomorrow ({new Date(new Date().setDate(new Date().getDate() + 1)).toLocaleDateString(undefined, { day: 'numeric', month: 'long', year: 'numeric' })})</h2>
       <div className="slots">
         {availableSlots
           .filter((slot) => slot.date === tomorrowDate)

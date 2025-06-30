@@ -2,7 +2,7 @@ import React from 'react'
 import { useRef } from "react";
 import "./Navbar.css"
 // import { useState } from 'react';
-import logo from './assets/logo.png'
+import logo from './assets/sports-logo-transparent.png'
 import { FaBars, FaTimes } from "react-icons/fa";
 // import { GiHamburgerMenu } from "react-icons/gi";
 

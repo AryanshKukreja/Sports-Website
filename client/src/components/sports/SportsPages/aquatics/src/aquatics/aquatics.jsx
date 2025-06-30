@@ -118,7 +118,7 @@ const Aquatics = () => {
       </div>
 
 
-      <div className='about'>
+      <div className='aq-about'>
         Comprising of Swimming and Water Polo, Aquatics is one of the most widely practiced sports at IIT Bombay.
         The magnificent Olympic-sized pool, newly built and impeccably maintained, welcomes anyone seeking recreation
         or competitive glory. Owing to the coaches Reddy Sir (Retd.) and Ritesh Sir,  IIT Bombay Aquatics has witnessed

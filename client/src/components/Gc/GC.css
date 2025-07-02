@@ -11,9 +11,9 @@
 /* Main Container */
 .gc-container {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: #0f172a;
   min-height: 100vh;
-  color: #1a202c;
+  color: #e2e8f0;
   padding: 2rem 0;
 }
 
@@ -27,9 +27,7 @@
 .gc-header h1 {
   font-size: 3.8rem;
   font-weight: 900;
-  background: linear-gradient(135deg, #d69e2e 0%, #f6ad55 50%, #ed8936 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffee7d;
   background-clip: text;
   margin-bottom: 1rem;
   letter-spacing: -0.02em;
@@ -43,9 +41,9 @@
   bottom: -15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
+  width: 70%;
   height: 5px;
-  background: linear-gradient(135deg, #d69e2e, #ed8936);
+  background: #ffee7d;
   border-radius: 3px;
 }
 
@@ -61,10 +59,10 @@
 }
 
 .podium {
-  background: white;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   border-radius: 20px 20px 8px 8px;
   text-align: center;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
   border: 2px solid;
   position: relative;
   transition: all 0.3s ease;
@@ -83,7 +81,7 @@
 
 .podium:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
 }
 
 /* First Place - Gold */
@@ -91,7 +89,7 @@
   height: 280px;
   width: 200px;
   border-color: #d69e2e;
-  background: linear-gradient(135deg, #fff8dc 0%, #fffbf0 100%);
+  background: linear-gradient(135deg, #2c2a21 0%, #3e3a2f 100%);
 }
 
 .first-place::before {
@@ -120,7 +118,7 @@
   height: 240px;
   width: 180px;
   border-color: #a0aec0;
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
 }
 
 .second-place::before {
@@ -129,7 +127,7 @@
 
 .second-place .podium-label {
   background: linear-gradient(135deg, #a0aec0, #cbd5e0);
-  color: white;
+  color: #1a202c;
   font-size: 1.1rem;
   font-weight: 700;
   padding: 0.875rem;
@@ -149,7 +147,7 @@
   height: 200px;
   width: 160px;
   border-color: #c05621;
-  background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+  background: linear-gradient(135deg, #3c2e25 0%, #4f3a2e 100%);
 }
 
 .third-place::before {
@@ -177,24 +175,24 @@
 .podium h2 {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #2d3748;
+  color: #e2e8f0;
   margin-bottom: 0.5rem;
 }
 
 .podium p {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #4a5568;
+  color: #cbd5e0;
 }
 
 .first-place h2 {
   font-size: 2rem;
-  color: #d69e2e;
+  color: #f6ad55;
 }
 
 .first-place p {
   font-size: 1.3rem;
-  color: #d69e2e;
+  color: #f6ad55;
 }
 
 /* Overall Standings Table */
@@ -208,21 +206,21 @@
   font-size: 2.5rem;
   font-weight: 800;
   text-align: center;
-  color: #2d3748;
+  color: #7ee7ff;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
+  /* background: linear-gradient(135deg, #4299e1 0%, #667eea 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   background-clip: text;
 }
 
 .gc-table table {
   width: 100%;
-  background: white;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .gc-table th {
@@ -238,31 +236,31 @@
 .gc-table td {
   padding: 1.25rem 1rem;
   text-align: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #4a5568;
   font-weight: 600;
-  color: #2d3748;
+  color: #e2e8f0;
   transition: all 0.3s ease;
 }
 
 .gc-table tbody tr:hover {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: #2d3748;
   transform: scale(1.01);
 }
 
 .gc-table tbody tr:nth-child(1) td {
-  background: linear-gradient(135deg, #fff8dc 0%, #fffbf0 100%);
+  background: linear-gradient(135deg, #2c2a21 0%, #3e3a2f 100%);
   color: #d69e2e;
   font-weight: 800;
 }
 
 .gc-table tbody tr:nth-child(2) td {
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-  color: #4a5568;
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  color: #cbd5e0;
   font-weight: 700;
 }
 
 .gc-table tbody tr:nth-child(3) td {
-  background: linear-gradient(135deg, #fef5e7 0%, #fed7aa 100%);
+  background: linear-gradient(135deg, #3c2e25 0%, #4f3a2e 100%);
   color: #c05621;
   font-weight: 700;
 }
@@ -278,11 +276,11 @@
 .sport-selection h2 {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #2d3748;
+  color: #7efff0;
   margin-bottom: 2rem;
-  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  /* background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   background-clip: text;
 }
 
@@ -292,25 +290,25 @@
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2d3748;
-  background: white;
-  border: 2px solid #e2e8f0;
+  color: #e2e8f0;
+  background: #2d3748;
+  border: 2px solid #4a5568;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .sport-dropdown:focus {
   outline: none;
-  border-color: #38a169;
-  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
+  border-color: #7efff0;
+  box-shadow: 0 0 0 3px #7efff0;
 }
 
 .sport-dropdown:hover {
-  border-color: #38a169;
+  border-color: #7efff0;
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
 }
 
 /* Sport Results Section */
@@ -324,7 +322,7 @@
   font-size: 2.2rem;
   font-weight: 800;
   text-align: center;
-  color: #2d3748;
+  color: #e2e8f0;
   margin-bottom: 3rem;
   background: linear-gradient(135deg, #805ad5 0%, #9f7aea 100%);
   -webkit-background-clip: text;
@@ -346,7 +344,7 @@
   height: 220px;
   width: 160px;
   border-color: #805ad5;
-  background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+  background: linear-gradient(135deg, #2a233d 0%, #3c315e 100%);
 }
 
 .sport-first-place::before {
@@ -370,11 +368,11 @@
 /* Sport-specific Table */
 .sports-gc-table {
   width: 100%;
-  background: white;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 2rem;
 }
 
@@ -391,13 +389,13 @@
 .sports-gc-table td {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #4a5568;
   font-weight: 600;
-  color: #2d3748;
+  color: #e2e8f0;
 }
 
 .sports-gc-table tbody tr:hover {
-  background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+  background: #2d3748;
 }
 
 /* Footer */
@@ -405,14 +403,14 @@
   text-align: center;
   margin-top: 4rem;
   padding: 2rem;
-  color: #4a5568;
+  color: #cbd5e0;
   font-weight: 500;
-  background: white;
+  background: #1a202c;
   border-radius: 20px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Responsive Design */

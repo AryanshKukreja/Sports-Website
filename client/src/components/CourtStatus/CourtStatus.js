@@ -329,8 +329,8 @@ const CourtStatus = () => {
       </div>
 
       {/* Facility Map */}
-      <div className="cs-facility-map-container" style={{ color: 'black' }}>
-        <h2 style={{color:'#3CB371', fontSize:"4.5vw"}}>IITB Sports Facilities Map</h2>
+      <div className="cs-facility-map-container">
+        <h2>IITB Sports Facilities Map</h2>
         <div className="cs-map-controls">
           {isEditingMap && (
             <>
@@ -361,7 +361,7 @@ const CourtStatus = () => {
             backgroundImage: `url(${mapImage})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            border: '2px solid #ccc',
+            border: '2px solid #1e293b',
             cursor: isEditingMap ? 'crosshair' : 'default'
           }}
         >
@@ -414,15 +414,15 @@ const CourtStatus = () => {
       <div className="cs-legend">
         <div className="cs-legend-item">
           <div className="cs-legend-color available"></div>
-          <span style={{ color: 'black' }}>Available</span>
+          <span >Available</span>
         </div>
         <div className="cs-legend-item">
           <div className="cs-legend-color booked"></div>
-          <span style={{ color: 'black' }}>Booked</span>
+          <span >Booked</span>
         </div>
         <div className="cs-legend-item">
           <div className="cs-legend-color maintenance"></div>
-          <span style={{ color: 'black' }}>Maintenance</span>
+          <span >Maintenance</span>
         </div>
       </div>
 
@@ -444,7 +444,6 @@ const CourtStatus = () => {
                     className={`cs-time-column ${slot.id === currentTimeSlotId ? 'current-time' : ''} ${
                       isCurrentOrPast(slot.formatted_slot) ? 'past-time' : ''
                     }`}
-                    style={{ color: 'black' }}
                   >
                     {slot.formatted_slot}
                   </th>

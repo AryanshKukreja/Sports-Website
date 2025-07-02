@@ -51,7 +51,7 @@ const BookingPage = () => {
   useEffect(() => {
     const fetchSlots = async () => {
       try {
-        const response = await fetch('https://turf-backend-cdpo.onrender.com/api/slots');
+        const response = await fetch('https://turfbackend1-l63zjkfl.b4a.run/api/slots');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const slots = await response.json();
         setAvailableSlots(slots);
@@ -62,7 +62,7 @@ const BookingPage = () => {
 
     const fetchExistingBookings = async () => {
       try {
-        const response = await fetch('https://turf-backend-cdpo.onrender.com/students');
+        const response = await fetch('https://turfbackend1-l63zjkfl.b4a.run/students');
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         const students = await response.json();
         const rollNumbers = students.map((student) => student.rollno);
@@ -100,7 +100,7 @@ const BookingPage = () => {
 
     if (selectedSlotIndex !== null) {
       try {
-        const response = await fetch('https://turf-backend-cdpo.onrender.com/', {
+        const response = await fetch('https://turfbackend1-l63zjkfl.b4a.run/', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

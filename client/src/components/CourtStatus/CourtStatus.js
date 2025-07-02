@@ -33,7 +33,7 @@ const generateOneHourTimeSlots = () => {
 };
 const MANUAL_TIME_SLOTS = generateOneHourTimeSlots();
 
-const API_BASE_URL = 'http://127.0.0.1:8000';
+const API_BASE_URL = 'https://courtstatusbackend-lo8700s6.b4a.run';
 
 const CourtStatus = () => {
   const [sports, setSports] = useState([]);

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ContactMe from "./contactform";
 import './page.css';
 
 const ContactUs = () => {

@@ -18,15 +18,15 @@ const SAC = () =>{
         <div>
             <h2>Sports Officers : </h2>
             <ul>
-                <li className="info">Dr Prabhakaran Ramasamy<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>9475349787</span></li>
-                <li className="info">Dr Harish Padinjarethil<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>7034057773</span></li>
-                <li className="info">Mr. Pritesh Yadav<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>8850176798</span></li>
-                <li className="info">Ms. Prapti Salunkhe<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>9167938056</span></li>
-                <li className="info">Mr Anuj Pratap Singh<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>9560909875</span></li>
-                <li className="info">Mr Ritesh Guchhait<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>7389582408</span></li>
-                <li className="info">Mr Shelendra Rasaniya<span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>9793990585</span></li>
-                <li className="info">Dr. Prabhu Pandian <span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>##****</span></li>
-                <li className="info">Dr. Prabhu Pandian <span className="phone"><img src="./pictures/phone.svg" className="phlog"></img>##**##</span></li>
+                <li className="info">Dr Prabhakaran Ramasamy<span className="phone"><img src="./pictures/phone.svg" alt="" className="phlog"></img>9475349787</span></li>
+                <li className="info">Dr Harish Padinjarethil<span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>7034057773</span></li>
+                <li className="info">Mr. Pritesh Yadav<span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>8850176798</span></li>
+                <li className="info">Ms. Prapti Salunkhe<span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>9167938056</span></li>
+                <li className="info">Mr Anuj Pratap Singh<span className="phone"><img src="./pictures/phone.svg" alt="" className="phlog"></img>9560909875</span></li>
+                <li className="info">Mr Ritesh Guchhait<span className="phone"><img src="./pictures/phone.svg" alt="" className="phlog"></img>7389582408</span></li>
+                <li className="info">Mr Shelendra Rasaniya<span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>9793990585</span></li>
+                <li className="info">Dr. Prabhu Pandian <span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>##****</span></li>
+                <li className="info">Dr. Prabhu Pandian <span className="phone"><img src="./pictures/phone.svg"  alt=""className="phlog"></img>##**##</span></li>
             </ul>
         </div>
         </div>

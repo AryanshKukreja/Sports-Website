@@ -32,10 +32,9 @@
 .vertical-timeline-element-content {
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%) !important;
   border-radius: 20px !important;
-  box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.2),
-    0 0 0 1px rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
+  border: 0px solid rgba(255, 255, 255, 0.1) !important;
   padding: 2.5rem !important;
   position: relative;
   overflow: hidden;

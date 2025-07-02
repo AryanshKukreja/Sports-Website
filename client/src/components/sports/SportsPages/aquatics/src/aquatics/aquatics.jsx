@@ -49,7 +49,7 @@ const Aquatics = () => {
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === images.length - 1 ? 0 : prevIndex - 1
     );
   };
 
@@ -112,7 +112,7 @@ const Aquatics = () => {
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
         Aquatics
       </div>
@@ -129,9 +129,9 @@ const Aquatics = () => {
 
 
       <div className='facilities'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
+          <h3 className='aq-headingtext'>Facilities</h3>
         </div>
         <div className='content'>
           <p className='facilityText'>
@@ -145,31 +145,37 @@ const Aquatics = () => {
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
 
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-              key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
         {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -178,22 +184,22 @@ const Aquatics = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
             <img src={user} className='contactImg' />
-            <p className='name'>Ritesh Guchhait</p>
+            <p className='aq-name'>Ritesh Guchhait</p>
             <p className='info'>Coach, Sports Officer</p>
             <p className='info'></p>
 
           </div>
           <div className='contactCard' >
             <img src={asec} className='contactImg' />
-            <p className='name'>Achirangshu Dakua</p>
+            <p className='aq-name'>Achirangshu Dakua</p>
             <p className='info'>Institute Aquatics Secretary</p>
             <p className='info'>+91 94745 91609</p>
           </div>
@@ -201,9 +207,9 @@ const Aquatics = () => {
 
       </div>
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
         {/* <div className='imageSlider'>
           <Slider {...imageSliderSettings}>

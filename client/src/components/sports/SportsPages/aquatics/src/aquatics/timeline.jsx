@@ -13,7 +13,8 @@ const Timel = () => {
                 <VerticalTimelineElement className="vertical-timeline-element--education"
                 iconStyle={{background:'#000', color:'#fff'}}
                 icon={<GiTrophyCup />}
-                date='2022-23' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                date='2022-23' contentStyle={{ background: '#2F2B77', color: '#fff' }}
+                style={{ boxShadow: '0' }}>
                     <h3 style={{color: '#E4E2FA'}}>Inter IIt Aquatics Meet</h3>
                     <p style={{color: '#E4E2FA'}}>
                         Mens Swimming : 2nd place

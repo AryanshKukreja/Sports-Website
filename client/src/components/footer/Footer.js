@@ -16,7 +16,7 @@ const Footer = () => {
     <div className='footer'>
       <div className='footerdiv'>
         <div class="footer-content">
-          <h3>Quick Links</h3>
+          <h3 className='footer-heading'>Quick Links</h3>
           <ul class="list">
             <li><a href="/sports/inter-iit">Inter IIT</a></li>
             <li><a href="/sports">Home</a></li>
@@ -24,7 +24,7 @@ const Footer = () => {
           </ul>
         </div>
         <div class="footer-content">
-          <h3>Follow Us</h3>
+          <h3 className='footer-heading'>Follow Us</h3>
           <ul class="social-icons">
             <li><a href="https://www.linkedin.com/company/iit-bombay-sports?originalSubdomain=in" target='blank'><FaLinkedin /></a></li>
             <li><a href="https://www.instagram.com/iitbombaysports/?hl=en" target='blank'><FaInstagram /></a></li>

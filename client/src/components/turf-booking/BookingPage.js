@@ -162,14 +162,14 @@ const BookingPage = () => {
   };
 
   const getSlotColor = (status, isSelected) => {
-    if (status === 'booked') return 'red';
-    if (status === 'requested') return 'orange';
-    if (isSelected) return 'lightblue';
-    return 'green';
+    if (status === 'booked') return '#DC143C';
+    if (status === 'requested') return '#ff6d40';
+    if (isSelected) return '#4096ff';
+    return '#29AB87';
   };
 
   return (
-    <div>
+    <div className='turf-booking-container'>
       <h1 className='football-turf-heading'>Football Turf Booking</h1>
 
       {/* Today's Slots */}
@@ -178,23 +178,26 @@ const BookingPage = () => {
       <div className="slots">
         {availableSlots
           .filter((slot) => slot.date === todayDate)
-          .map((slot, index) => (
-            <button
-              key={`today-slot-${slot.slot}`}
-              style={{
-                padding: '10px',
-                backgroundColor: getSlotColor(slot.status, false),
-                cursor: 'not-allowed',
-              }}
-              disabled
-            >
-              {slotTimings[index]} <br />
-              Status: {slot.status}
-            </button>
-          ))}
+          .map((slot, index) => {
+            // Force "8:00 PM - 9:30 PM" slot to show as booked
+            const isSpecialSlot = slotTimings[index] === "8:00 PM - 9:30 PM";
+            const status = isSpecialSlot ? 'booked' : slot.status;
+            return (
+              <button
+                key={`today-slot-${slot.slot}`}
+                style={{
+                  padding: '10px',
+                  backgroundColor: getSlotColor(status, false),
+                  cursor: 'not-allowed',
+                }}
+                disabled
+              >
+                {slotTimings[index]} <br />
+                Status: {status}
+              </button>
+            );
+          })}
       </div>
-
-      
 
       <h2 className='booking-form-heading'>Booking Form</h2>
       <form className="booking-form" onSubmit={handleFormSubmit}>
@@ -278,21 +281,26 @@ const BookingPage = () => {
       <div className="slots">
         {availableSlots
           .filter((slot) => slot.date === tomorrowDate)
-          .map((slot, index) => (
-            <button
-              key={`tomorrow-slot-${slot.slot}`}
-              onClick={() => handleSlotClick(index)}
-              style={{
-                padding: '10px',
-                backgroundColor: getSlotColor(slot.status, index === selectedSlotIndex),
-                cursor: slot.status === 'available' ? 'pointer' : 'not-allowed',
-              }}
-              disabled={slot.status === 'booked'}
-            >
-              {slotTimings[index]} <br />
-              Status: {slot.status}
-            </button>
-          ))}
+          .map((slot, index) => {
+            // Force "8:00 PM - 9:30 PM" slot to show as booked
+            const isSpecialSlot = slotTimings[index] === "8:00 PM - 9:30 PM";
+            const status = isSpecialSlot ? 'booked' : slot.status;
+            return (
+              <button
+                key={`tomorrow-slot-${slot.slot}`}
+                onClick={() => handleSlotClick(index)}
+                style={{
+                  padding: '10px',
+                  backgroundColor: getSlotColor(status, index === selectedSlotIndex),
+                  cursor: status === 'available' ? 'pointer' : 'not-allowed',
+                }}
+                disabled={status === 'booked'}
+              >
+                {slotTimings[index]} <br />
+                Status: {status}
+              </button>
+            );
+          })}
       </div>
       <div className="form-group form-checkbox">
   <input

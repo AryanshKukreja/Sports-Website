@@ -49,7 +49,7 @@ function parseISCEvents(json) {
           title: item.Event,
           date: dateObj.toISOString().split('T')[0],
           sport: item.Sport,
-          description: item.Event
+          /* description: item.Event */
         });
       });
     } else if (dates.length === 1) {
@@ -62,7 +62,7 @@ function parseISCEvents(json) {
           title: item.Event,
           date: dateObj.toISOString().split('T')[0],
           sport: item.Sport,
-          description: item.Event
+          /* description: item.Event */
         });
       }
     }
@@ -76,6 +76,7 @@ function parseISCEvents(json) {
 const allSports = Array.from(new Set(ISCEvents.map(e => e.Sport))).filter(Boolean).sort();
 
 const sportColors = {
+  "Aquatics": "#48D1CC",
   "Basketball": "#f97316",
   "Swimming": "#06b6d4",
   "Football": "#22c55e",
@@ -328,7 +329,7 @@ export default function SportsCalendar() {
                           </div>
                         </div>
                         <div className="sports-event-description">
-                          {event.description}
+                          {/* {event.description} */}
                         </div>
                       </div>
                     )))
@@ -348,7 +349,7 @@ export default function SportsCalendar() {
                   className="sports-legend-color"
                   style={{ backgroundColor: sportColors[sport] }}
                 ></div>
-                <span style={{ color: 'black' }}>{sport}</span>
+                <span>{sport}</span>
               </div>
             ))}
           </div>

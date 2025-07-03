@@ -1,8 +1,10 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 body{
@@ -12,7 +14,7 @@ body{
     background: #161544;
 }
 
-footer{
+/* footer{
     position:sticky;
     width: 100%;
     height: 200px;
@@ -20,7 +22,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 .footer{
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
@@ -57,7 +59,7 @@ footer{
 }
 .list{
     padding: 0;
-    color: #B4B3FC;
+    color: #7ee7ff;
     font-size: 20px;
 }
 .list li{
@@ -91,18 +93,18 @@ footer{
     padding: 5px;
 }
 .social-icons i{
-    color: #B4B3FC;
+    color: #7ee7ff;
     font-size: 25px;
 }
 a{
     text-decoration: none;
-    color: #B4B3FC;
+    color: #7ee7ff;
 }
 a:hover{
-    color: #DDFF00;
+    color: #7effe3;
 }
 .social-icons i:hover{
-    color: #B4B3FC;
+    color: #7ee7ff;
 }
 .bottom-bar{
     background: #f5efea;
@@ -111,7 +113,7 @@ a:hover{
     margin-top: 50px;
 }
 .bottom-bar p{
-    color: #B4B3FC;
+    color: #7ee7ff;
     margin: 0;
     font-size: 16px;
     padding: 7px;

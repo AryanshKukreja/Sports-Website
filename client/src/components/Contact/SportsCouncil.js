@@ -1,292 +1,233 @@
 import React from "react";
 import "./council.css"
 
-const Council = () =>{
-    return(
+const Council = () => {
+    return (
         <>
-        <div className="all_content">
-        <h1 className="title">Institute Sports Council</h1>
-        <h1 className="title">2024-2025</h1>
-        <div className="leader">
-        <h2>General Secretary Sports Affairs</h2>
-        <img className="gen" src="./photo.png" />
-        <p className="name">Rajwardhan Toraskar<br />
-        <a href="#"><img className="seclogos" src="./instagram.png"></img></a>
-        <a href="#"><img className="sec_mail_logos" src="./mail.png"></img></a>
-        </p>
-        </div>
-        <div class="container">
-        <div class="info-block">
-            <h2>Institute Events Nominee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Atharva Naik<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Institute Admin Nominee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Raghav Agrawal<br/>
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Institute Girls Nominee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Akanksha Kadam<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>PG Sports Nominee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Nikhil Thejesh<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <h1><b>Heads</b></h1>
-        <div class="container">
-        <div class="info-block">
-            <h2>Technical Head</h2>
-            <img className="circular" src="./pictures/kalpesh.jpg" alt="Photo" />
-            <p className="name">
-                Kalpesh Khare<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        {/* <div class="info-block">
-            <h2>Creatives Head</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Full Name<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div> */}
-        <div class="info-block">
-            <h2>Media Head</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Hiya Agrawal<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <h1><b>Secretaries</b></h1>
-        <div class="container">
-        <div class="info-block">
-            <h2>Aquatics</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Achirangshu Dakua<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Athletics</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Raghav Agrawla<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Badminton</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Prayash Sahu<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Basketball</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Antara Pandey<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <div class="container">
-        <div class="info-block">
-            <h2>Board Games</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Aditya Murali<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Cricket</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Rajvardhan Sharma<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Football</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Rajwardhan Toraskar<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Hockey</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Rohit Meena<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <div class="container">
-        <div class="info-block">
-            <h2>Indian Games</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Priyanshu Kumar Meena<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Lawn Tennis</h2>
-            <img className="circular" src="./pictures/atharva.jpg" alt="Photo" />
-            <p className="name">
-                Atharva Naik<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Squash</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Vishwam Raval<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Table Tennis</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Bhavin Jain<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <div class="container">
-        <div class="info-block">
-            <h2>Volleyball</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Abhay Meena<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Weight Lifting</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Harish Chand<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <h1><b>Managers</b></h1>
-        <div class="container">
-        <div class="info-block">
-            <h2>Rubiks Club</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Advay Sant<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Ultimate Frisbee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Avishi Pareek<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Ultimate Frisbee</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Tannay<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Adventure Club</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Sameer Ladekar<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        <div class="container">
-        <div class="info-block">
-            <h2>Dark Knight Chess Club</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Shrikant Dighole<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Fitness Club</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Shankar<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        <div class="info-block">
-            <h2>Yogastha</h2>
-            <img className="circular" src="./photo.png" alt="Photo" />
-            <p className="name">
-                Name<br />
-                <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
-                <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
-            </p>
-        </div>
-        </div>
-        </div>
+            <div className="all_content">
+                <h1 className="title">Institute Sports Council</h1>
+                <h1 className="title">2024-2025</h1>
+                <div className="leader">
+                    <h2>General Secretary Sports Affairs</h2>
+                    <img className="gen" src="./photo.png" />
+                    <p className="name">Rajwardhan Toraskar<br />
+                        <a href="#"><img className="seclogos" src="./instagram.png" /></a>
+                        <a href="#"><img className="sec_mail_logos" src="./mail.png" /></a>
+                    </p>
+                </div>
+                <div className="container">
+                    {/* Nominees FIRST */}
+                    <div className="info-block">
+                        <h2>Institute Sports Nominee-Events & Clubs</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Atharva Naik<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Sports Girls Nominee</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Akshara Naik<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Sports Admin Nominee</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Raghav Agrawal<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    </div>
+                    {/* Heads BELOW */}
+                    <h1 className="con-heads"><b>Heads</b></h1>
+                    <div className="container">
+                    <div className="info-block">
+                        <h2>Institute Sports Technical Head</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Aryansh Kukreja<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Sports Creatives Head</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Akanksha Patel<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Sports Media Head</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Yaman Singh<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                </div>
+                <h1 className="con-secys"><b>Secretaries</b></h1>
+                <div className="container">
+                    <div className="info-block">
+                        <h2>Institute Football Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Yash Shah<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Badminton Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            J Sai Charan<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Volleyball Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Ghanshyam Choudhary<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Weightlifting Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Prateek Behera<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Cricket Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Pradyumna Gugulothu<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Board Games Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Akshat Karkar<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Table Tennis Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Sameer Chopra<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Lawn Tennis Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Nehal Gupta<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Indian Games Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Kanak Tembhare<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Squash Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Manthan Goyal<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Athletics Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Praveen Kumar<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Institute Hockey Secretary</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Khushal<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                </div>
+                {/* Managers Section */}
+                <h1 className="con-managers"><b>Managers</b></h1>
+                <div className="container">
+                    <div className="info-block">
+                        <h2>Adventure Club Manager</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Mohit Yadav<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>DKCC Manager</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Shreyas Jogdande<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Fitness Club Manager</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Piyush Tailor<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                    <div className="info-block">
+                        <h2>Frisbee Manager</h2>
+                        <img className="circular" src="./photo.png" alt="Photo" />
+                        <p className="name">
+                            Shaashvat Shekhar<br />
+                            <a href="#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                            <a href="#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
         </>
     );
 };

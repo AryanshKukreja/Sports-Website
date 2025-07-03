@@ -11,9 +11,9 @@
 /* Main Container */
 .block {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+  background: #0f172a;
   min-height: 100vh;
-  color: #1a202c;
+  color: #cbd5e1;
   padding: 3rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -25,23 +25,35 @@
   font-weight: 800;
   text-align: center;
   margin: 3rem 0 2rem;
-  background: linear-gradient(135deg, #4299e1 0%, #667eea 50%, #764ba2 100%);
+  color: #7ee7ff;
+  /* background: linear-gradient(135deg, #3ee5e5 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   background-clip: text;
   letter-spacing: -0.02em;
   position: relative;
 }
 
-.insti::after {
+.insti.WEB::after {
   content: '';
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
+  width: 120px;
   height: 4px;
-  background: linear-gradient(135deg, #4299e1, #667eea);
+  background: #7ee7ff;
+  border-radius: 2px;
+}
+.insti.ISC::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 4px;
+  background: #7ee7ff;
   border-radius: 2px;
 }
 
@@ -50,23 +62,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   font-size: 1.1rem;
   font-weight: 500;
-  background: white;
+  background: linear-gradient(145deg, #1e293b 0%, #334155 100%);
   padding: 1.5rem 2rem;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .block p:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
 }
 
 /* Email and Phone Spans */
@@ -74,12 +84,12 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  color: #2d3748;
+  color: #f8fafc;
   font-weight: 600;
 }
 
 .mail img, .tele img {
-  filter: brightness(0.8);
+  filter: brightness(1.2);
   transition: transform 0.3s ease;
 }
 
@@ -89,7 +99,7 @@
 
 /* Button Styling */
 .btn {
-  background: linear-gradient(135deg, #38a169 0%, #48bb78 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -98,7 +108,7 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(56, 161, 105, 0.3);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-family: 'Inter', sans-serif;
@@ -106,8 +116,8 @@
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(56, 161, 105, 0.4);
-  background: linear-gradient(135deg, #2f855a 0%, #38a169 100%);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
 }
 
 .btn a {
@@ -124,7 +134,7 @@
 .block h2:not(:first-of-type) {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 2px solid #e2e8f0;
+  border-top: 2px solid #334155;
 }
 
 /* Responsive Design */
@@ -170,21 +180,5 @@
   .btn {
     padding: 0.75rem 1.25rem;
     font-size: 0.85rem;
-  }
-}
-
-/* Print styles */
-@media print {
-  .block {
-    background: white !important;
-  }
-  
-  .btn {
-    display: none;
-  }
-  
-  .block p {
-    box-shadow: none !important;
-    border: 1px solid #ccc !important;
   }
 }

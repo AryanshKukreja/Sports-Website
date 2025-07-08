@@ -10,19 +10,20 @@ import { FaBars, FaTimes } from "react-icons/fa";
 const Navbar = () => {
 //   const [showmediaicon, setshowmediaicon] = useState(false);
   const navRef = useRef();
-
+  const head = useRef();
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
+    head.current.classList.toggle("res_head");
   };
   return (
     <header className='head'>
-      <div className='logo2'>
+      <div className='logo2'  ref={head}>
           <img src={logo} className='logoimg2' alt='logo'></img>
       </div>
       <nav className='mainNav' ref={navRef}>
-        <div className='logo'>
+        {/* <div className='logo'>
           <img src={logo} className='logoimg' alt='logo'></img>
-        </div>
+        </div> */}
         <div className="menu">
           <ul >
             <li className='menuItem'>

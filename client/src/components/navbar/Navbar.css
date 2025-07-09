@@ -33,7 +33,7 @@
 }
 
 .logoimg2 {
-  height: 50px;
+  height: 70px;
   width: auto;
   filter: brightness(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.2));
   transition: all 0.3s ease;
@@ -283,7 +283,7 @@
   }
   
   .logoimg2 {
-    height: 42px;
+    height: 55px;
   }
   
   .menu ul {

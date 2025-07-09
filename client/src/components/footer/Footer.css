@@ -38,7 +38,7 @@ body{
     color: 'red';
     font-size: 24px;
 } */
-.container{
+.fcontainer{
     width: 1140px;
     margin: auto;
     display: flex;
@@ -150,7 +150,7 @@ a:hover{
     .list {
         font-size: 18px;
     }
-    .container {
+    .fcontainer {
         flex-direction: column;
         align-items: center;
     }

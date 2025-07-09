@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import ContactUs from "./components/Contact/ContactUs";
 import Sports from "./components/sports/Sports";
 import Aquatics from "./components/sports/SportsPages/aquatics/src/aquatics/aquatics";
+import Volleyball from "./components/sports/SportsPages/volleyball/volleyball/volleyball";
 import SAC from "./components/Contact/SAC";
 import Council from "./components/Contact/SportsCouncil";
 import Webteam from "./components/Contact/webteam";
@@ -47,6 +48,7 @@ function App() {
             <Route path="/sports/contact" element={<ContactUs />} />
             <Route path="/sports/explore" element={<Sports/>} />
             <Route path="/sports/aquatics" element={<Aquatics />} />
+            <Route path="/sports/volleyball" element={<Volleyball />} />
             <Route path="/sports/SAC" element={<SAC/>} />
             <Route path="/sports/Council" element={<Council/>} />
             <Route path="/sports/Webteam" element={<Webteam/>} />

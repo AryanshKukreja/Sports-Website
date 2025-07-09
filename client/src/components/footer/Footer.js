@@ -18,7 +18,6 @@ const Footer = () => {
         <div class="footer-content">
           <h3 className='footer-heading'>Quick Links</h3>
           <ul class="list">
-            <li><a href="/sports/inter-iit">Inter IIT</a></li>
             <li><a href="/sports">Home</a></li>
             <li><a href="/sports/contact">Contact</a></li>
           </ul>

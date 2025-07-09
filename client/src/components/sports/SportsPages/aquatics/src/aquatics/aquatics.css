@@ -23,9 +23,7 @@
   font-weight: 900;
   text-align: center;
   margin: 2rem 0 3rem;
-  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 50%, #6366f1 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #7ee7ff;
   background-clip: text;
   letter-spacing: -0.02em;
   position: relative;
@@ -39,7 +37,7 @@
   transform: translateX(-50%);
   width: 120px;
   height: 5px;
-  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  background: #7ee7ff;
   border-radius: 3px;
 }
 

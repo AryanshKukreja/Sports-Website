@@ -231,10 +231,10 @@ const Aquatics = () => {
       </div>
 
 
-      <div className='timing'>
+      {/* <div className='timing'>
         <p className='side'>Pool Timings</p>
         <img src={time2} className='schimg' />
-      </div>
+      </div> */}
 
       <div className='location'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.6801509832069!2d72.91331199999999!3d19.135699499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b808367d7489%3A0x5936f3009b0ecd48!2sBaby%20Swimming%20Pool.%20IIT%20Bombay!5e0!3m2!1sen!2sin!4v1719689561544!5m2!1sen!2sin"

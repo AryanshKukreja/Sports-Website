@@ -1,5 +1,4 @@
 import React from 'react';
-import './cricket.css';
 import Timel from './timeline2';
 import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
@@ -13,10 +12,31 @@ import img2 from "../images/p52.jpg";
 import img3 from "../images/p53.jpg";
 import img4 from "../images/p54.jpg";
 import img5 from "../images/p55.jpg";
+import ing from "../images/ing.jpg";
+import ing2 from "../images/ing2.jpg";
+import ing3 from "../images/ing3.JPG";
+import ing4 from "../images/ing4.JPG";
+import ing5 from "../images/ing5.png";
+import ing6 from "../images/ing6.png";
 
 
 const IndianGames = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -84,64 +104,72 @@ const IndianGames = () => {
   }
 
   const images = [
-    img1,img2,img3,img4,img5
+    img1,img2,img3,img4,img5,ing,ing2,ing3,ing4,ing5,ing6
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
             Indian Games
       </div>
 
 
-      <div className='about'>
-      <b>Kho-Kho:</b> Kho-Kho ranks as one of the most popular traditional sports in India, with a history dating back centuries. It is a dynamic and fast-paced sport that blends physical agility with strategic thinking, making it a beloved part of Indian sports culture and a growing interest internationally. It is characterized by its thrilling gameplay, where dodging, feinting, and bursts of controlled speed define its excitement. Playing Kho-Kho develops agility, teamwork, decision-making and enhances overall physical fitness and discipline.   
-                  <br></br><br></br>
-     <b>Kabaddi:</b> Kabaddi, originating from ancient India, has evolved into a globally recognized sport celebrated for its fast-paced gameplay and cultural significance. Played in various forms worldwide, including professional leagues like the Pro Kabaddi League, it combines athleticism with strategic thinking. Kabaddi promotes physical fitness, teamwork, and mental agility, captivating audiences with its dynamic matches and growing international appeal.
+      <div className='aq-about'>
+        Kho-Kho: Kho-Kho ranks as one of the most popular traditional sports in India, with a history dating back centuries. It is a dynamic and fast-paced sport that blends physical agility with strategic thinking, making it a beloved part of Indian sports culture and a growing interest internationally. It is characterized by its thrilling gameplay, where dodging, feinting, and bursts of controlled speed define its excitement. Playing Kho-Kho develops agility, teamwork, decision-making and enhances overall physical fitness and discipline.   
+                  
+        Kabaddi: Kabaddi, originating from ancient India, has evolved into a globally recognized sport celebrated for its fast-paced gameplay and cultural significance. Played in various forms worldwide, including professional leagues like the Pro Kabaddi League, it combines athleticism with strategic thinking. Kabaddi promotes physical fitness, teamwork, and mental agility, captivating audiences with its dynamic matches and growing international appeal.
+
+        Tug of War: Tug of War is a traditional sport that emphasizes teamwork, strength, and coordination. Played by two teams pulling a rope in opposite directions, it requires unity, strategy, and endurance. Simple yet intense, it remains a popular and spirited game in festivals and sports events, symbolizing collective effort and resilience.
       </div>
 
 
       <div className='facilities'>
-        <div className='heading'>
-          <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
-        </div>
-        <div className='content'>
-          <p className='facilityText'>
-            <b>Ground:</b> Indoor Kho-Kho Court and Kabaddi mat.
-            <br /><br /><b>Facilities:</b> IIT Bombay has one fully lighted indoor court with a mat that is open all days. 
-            Timings (Indoor Court) : 6:00 AM-10:00 PM
-          </p>
-        </div>
-      </div>
+              <div className='aq-heading'>
+                <MdDoubleArrow className='arrow' />
+                <h3 className='aq-headingtext'>Facilities</h3>
+              </div>
+              <div className='content'>
+                <p className='facilityText'>
+                  Ground: Indoor Kho-Kho Court and Kabaddi mat
+
+                  Facilities: IIT Bombay has one fully lighted Indoor court with a mat that is open all days. 
+                              Timings (Indoor Court) : 6:00 AM-10:00 PM
+                </p>
+                <img src={ing4} className='image' />
+              </div>
+            </div>
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -150,35 +178,33 @@ const IndianGames = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
             <img  className='contactImg' />
-            <p className='name'>Priyanshu Kumar Meena </p>
+            <p className='aq-name'>Kanak Tembhare</p>
             <p className='info'>Institute Indian Games Secretary</p>
-              <p className='info'>+91  89552 71464</p>
+              <p className='info'>+91 9322311654</p>
             
           </div>
         </div>
 
       </div>
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './cricket.css';
 import Timel from './timeline';
 import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
@@ -9,11 +8,29 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import cricket1 from '../images/cricket_1.jpg';
+import cric1 from '../images/cric1.jpg';
+import cric2 from '../images/cric2.jpg';
+import cric3 from '../images/cric3.jpg';
+import cric4 from '../images/cric4.jpg';
 
 
 
 const Cricket = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -81,65 +98,66 @@ const Cricket = () => {
   }
 
   const images = [
-    cricket1,
+    cricket1, cric1, cric2, cric3, cric4
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
         Cricket
       </div>
 
 
-      <div className='about'>
-      Cricket is a bat-and-ball game that is played between two teams of eleven players on a field at the centre of which is a 22-yard (20-metre)
-      pitch with a wicket at each end, each comprising two bails balanced on three stumps. 
-      Cricket is just as much of a religion on our campus as it is anywhere in the whole country. 
-      Our cricket field is best known for the Day & Night matches and Night practice in the Box nets.
+      <div className='aq-about'>
+      Cricket is as much a religion at IIT Bombay as it is across the country. From Day & Night matches on our main field to late-night sessions in the Indoor Nets, the passion runs deep. Last year, the institute made history by winning Gold in Inter IIT Cricket after 16 years, a proud moment for the entire campus.
       </div>
 
 
       <div className='facilities'>
-        <div className='heading'>
-          <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
-        </div>
-        <div className='content'>
-          <p className='facilityText'>
-            <b>Cricket Ground</b> :  The ground is situated in the heart of the gymkhana bordered by the athletic tracks. 
-            To facilitate night matches new lights are being installed on the gymkhana to provide best playing experience.  
-            <br /><br /><b>Cricket Pitches</b> : There are 4 indoor cricket pitches for practice during Monsoon, just opposite Hostel 3.
-          </p>
-        </div>
-      </div>
+              <div className='aq-heading'>
+                <MdDoubleArrow className='arrow' />
+                <h3 className='aq-headingtext'>Facilities</h3>
+              </div>
+              <div className='content'>
+                <p className='facilityText'>
+                  The ground is situated in the heart of the gymkhana bordered by the athletic tracks. To facilitate night matches new lights have been installed on the gymkhana to provide best playing experience. There are also 4 indoor cricket pitches for practice during Monsoon, just opposite Hostel 3. 
+                  We are also upcoming with customised pitches in indoor nets. The Institute Cricket team is well equipped team with all necessary equipments. We whole heartedly welcome new talents and give them space and opportunity to grow and develop game skills.
+                  </p>
+                <img src={cric2} className='image' />
+              </div>
+            </div>
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -148,35 +166,33 @@ const Cricket = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
             <img  className='contactImg' />
-            <p className='name'>Rajvardhan Sharma</p>
+            <p className='aq-name'>Pradyumna Gugulothu</p>
             <p className='info'>Institute Cricket Secretary</p>
-              <p className='info'>+91 95103 63498</p>
+              <p className='info'>+91 70139 54490</p>
             
           </div>
         </div>
 
       </div>
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
         </div>
       </div>
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './tabletennis.css';
 import Timel from './timeline';
 import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
@@ -24,6 +23,20 @@ import user from '../assets/user.jpg';
 
 const Tabletennis = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -89,29 +102,33 @@ const Tabletennis = () => {
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
-        Squash
+        Table Tennis
       </div>
 
 
-      <div className='about'>
-      Squash is a dynamic racquet sport played by two players in a four-walled court. Using a small rubber ball, players alternate hitting it against the front wall, aiming to outmaneuver their opponent. Points are scored in rallies, with games played to 11 points. The sport demands quick reflexes, agility, and strategic shot placement, including drives, boasts, and drop shots. Squash combines intense physical exertion with mental acuity, making it a thrilling and fast-paced game.
+      <div className='aq-about'>
+        Table Tennis at IIT Bombay is a thriving sport, defined by passion, precision, and perseverance. Under the guidance of Coach Dhaval Karnik, the TT community has seen remarkable growth, both in participation and performance. With numerous victories at the Inter-IIT Sports Meet, including podium finishes in 2022 and 2023, the IIT Bombay TT contingent is well known.
+
+        Whether it’s intense team practices, spirited ladder matches, or late-night recreational games, the energy in the TT hall is always amazing. Players of all skill levels are welcomed and supported, with structured sessions that emphasize technique, strategy, and sportsmanship.
+
+        While the facility, quipped with world-class tables, TT-specific flooring, and a host of training tools, provides the perfect training ground, it’s the dedication of the players that drives the sport forward.
       </div>
 
 
       <div className='facilities'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
+          <h3 className='aq-headingtext'>Facilities</h3>
         </div>
         <div className='content'>
           <p className='facilityText'>
-            <ul>
-              <li> 3 AC wooden courts in the NEW SAC</li>
-              <li> 1 court in OLD SAC</li>
-              <li> seating space in the courts</li>
-            </ul>
+            The table tennis court at IITB's gymkhana is air-conditioned and contains 8 of the most widely used tables in the world, including the Stag Americas and Stag 1000Dx. The floor has been fully matted with a TT focused flooring to avoid slips and injuries. Further, beginner friendly rackets and balls are provided using an issuance system. 
+            For team practice and exercise ladders, ropes, custom-made rackets and 3 star balls are available as well.
+            More than 30 players can get access to lockers to store their equipment. 
+            A robot has also been ordered to enhance team practice. 
+            Curtains and AC-diffusers are being installed to reduce glare and ball wobble.
           </p>
           <img src={pool3} className='image' />
         </div>
@@ -119,31 +136,35 @@ const Tabletennis = () => {
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -152,43 +173,41 @@ const Tabletennis = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
-            <img src={asec} className='contactImg' />
-            <p className='name'>Vishwam Raval</p>
-            <p className='info'>Institute Squash Secretary</p>
-              <p className='info'>+91 9591884821</p>
+            <img src={user} className='contactImg' />
+            <p className='aq-name'>Sameer Chopra</p>
+            <p className='info'>Institute Table Tennis Secretary</p>
+              <p className='info'>+91 9717777763</p>
           </div>
         </div>
 
       </div>
-      <div className='gallery'>
-        <div className='heading'>
-          <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
-        </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
-        </div>
 
+      <div className='gallery'>
+        <div className='aq-heading'>
+          <MdDoubleArrow className='arrow' />
+          <h3 className='aq-headingtext'>Gallery</h3>
+        </div>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
+        </div>
       </div>
 
 
-      <div className='timing'>
+      {/* <div className='timing'>
         <p className='side'>Court Timings</p>
         <img src={time2} className='schimg'/>
-      </div>
+      </div> */}
 
       <div className='location'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4020806480025!2d72.9093683747526!3d19.133869182082652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b80820306e3f%3A0xa4024d1ba55c8ed1!2sIITB%20New%20Gymkhana!5e0!3m2!1sen!2sin!4v1721551340933!5m2!1sen!2sin" 

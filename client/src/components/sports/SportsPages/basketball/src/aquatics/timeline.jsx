@@ -13,20 +13,30 @@ const Timel = () => {
                 <VerticalTimelineElement className="vertical-timeline-element--education"
                 iconStyle={{background:'#000', color:'#fff'}}
                 icon={<GiTrophyCup />}
-                date='2022' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
-                    {/* <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3> */}
+                date='2024' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    { <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3> }
                     <h4 style={{color: '#fff'}}>
-                    Inter-IIT 2022 Champions - Boys
+                    Girls: Inter-IIT 2024 Champions 
+                    <br/>Boys: Inter-IIT 2024 Silver Medallists 
+                    </h4>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement className="vertical-timeline-element--education"
+                iconStyle={{background:'#000', color:'#fff'}}
+                icon={<GiTrophyCup />}
+                date='2022' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    { <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3> }
+                    <h4 style={{color: '#fff'}}>
+                    Boys: Inter-IIT 2022 Champions
                     </h4>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement className="vertical-timeline-element--education"
                 iconStyle={{background:'#000', color:'#fff'}}
                 icon={<GiTrophyCup />}
                 date='2023' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
-                    {/* <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3> */}
+                    { <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3> }
                     <h4 style={{color: '#E4E2FA'}}>
-                    Inter-IIT 2023 Champions - Boys
-                    <br/>Inter-IIT 2023 SIlver Medallists - Girls
+                    Boys: Inter-IIT 2023 Champions
+                    <br/>Girls: Inter-IIT 2023 SIlver Medallists
                     </h4>
                 </VerticalTimelineElement>
             </VerticalTimeline>

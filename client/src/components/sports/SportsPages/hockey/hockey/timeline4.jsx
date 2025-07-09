@@ -13,6 +13,15 @@ const Timel = () => {
                 <VerticalTimelineElement className="vertical-timeline-element--education"
                 iconStyle={{background:'#000', color:'#fff'}}
                 icon={<GiMedal />}
+                date='2024' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    <h3 style={{color: '#E4E2FA'}}>Inter IIT </h3>
+                    <p style={{color: '#E4E2FA'}}>
+                        Boys Team:Silver
+                    </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement className="vertical-timeline-element--education"
+                iconStyle={{background:'#000', color:'#fff'}}
+                icon={<GiMedal />}
                 date='2023' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
                     <h3 style={{color: '#E4E2FA'}}>Inter IIT </h3>
                     <p style={{color: '#E4E2FA'}}>

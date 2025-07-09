@@ -1,18 +1,22 @@
-import React from 'react';
-import './cricket.css';
+import React, { useState, useRef, useEffect } from 'react';
 import Timel from './timeline';
-import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-
+import p1 from '../assets/p1.jpeg';
+import football_ground from '../assets/football_ground.jpeg';
+import football_team from '../assets/football_team.jpeg';
+import logo from '../assets/logo.jpeg';
+import turf from '../assets/turf.jpeg';
+import user from '../../aquatics/src/assets/user.jpg';
 
 const Football  = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -30,6 +34,18 @@ const Football  = () => {
   const flipcad1 = () => {
     setIsFlipped1(!isFlipped1);
   }
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const cards = [
     {
@@ -80,16 +96,21 @@ const Football  = () => {
   }
 
   const images = [
+    p1,
+    football_ground,
+    football_team,
+    logo,
+    turf
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
             Football
       </div>
 
 
-      <div className='about'>
+      <div className='aq-about'>
         <p>
           Football is a family of team sports that involve, to varying degrees, kicking a ball to score a goal. 
           Unqualified, the word football generally means the form of football that is the most popular where the word is used.
@@ -100,46 +121,51 @@ const Football  = () => {
 
 
       <div className='facilities'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
+          <h3 className='aq-headingtext'>Facilities</h3>
         </div>
         <div className='content'>
           <p className='facilityText'>
             <b>11-aside ground along with a newly constructed 6-aside turf.</b>
-            <br /><br />Apart from that we have  all the latest training equipment to supplement the team's practices. 
-                We also house a refrigerator for ice packs so that players need it as soon as possible and a water cooler in our shed.
+            <br /><br />Apart from that we have all the latest training equipment to supplement the team's practices. 
+            We also house a refrigerator for ice packs so that players need it as soon as possible and a water cooler in our shed.
           </p>
+          <img src={football_ground} className='image' alt="Football Turf" />
         </div>
       </div>
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -148,35 +174,39 @@ const Football  = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
-            <img  className='contactImg' />
-            <p className='name'>Rajwardhan Toraskar </p>
+            <img src={user} className='contactImg' />
+            <p className='aq-name'>XYZ</p>
+            <p className='info'>Coach, Sports Officer</p>
+            <p className='info'></p>
+
+          </div>
+          <div className='contactCard' >
+            <img src={user} className='contactImg' />
+            <p className='aq-name'>Yash Shah</p>
             <p className='info'>Institute Football Secretary</p>
-              <p className='info'>+91 96190 00065</p>
-            
+            <p className='info'>+91 88494 68317</p>
           </div>
         </div>
-
       </div>
+
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
         </div>
       </div>
 
@@ -194,7 +224,6 @@ const Football  = () => {
         <p className='sideL'>Location</p>
       </div>
     </div>
-  )
-}
-
+  ); 
+};
 export default Football;

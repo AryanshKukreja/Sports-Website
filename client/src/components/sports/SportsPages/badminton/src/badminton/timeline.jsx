@@ -13,10 +13,37 @@ const Timel = () => {
                 <VerticalTimelineElement className="vertical-timeline-element--education"
                 iconStyle={{background:'#000', color:'#fff'}}
                 icon={<GiTrophyCup />}
-                date='2023' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
-                    <h3 style={{color: '#E4E2FA'}}>Inter IIt Aquatics Meet</h3>
+                date='2024' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3>
                     <p style={{color: '#E4E2FA'}}>
-                        Inter IIT Silver medal - Girls
+                        Boys: Silver
+                    </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement className="vertical-timeline-element--education"
+                iconStyle={{background:'#000', color:'#fff'}}
+                icon={<GiTrophyCup />}
+                date='2023' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3>
+                    <p style={{color: '#E4E2FA'}}>
+                        Girls: Silver
+                    </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement className="vertical-timeline-element--education"
+                iconStyle={{background:'#000', color:'#fff'}}
+                icon={<GiTrophyCup />}
+                date='2019' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3>
+                    <p style={{color: '#E4E2FA'}}>
+                        Girls: Bronze
+                    </p>
+                </VerticalTimelineElement>
+                <VerticalTimelineElement className="vertical-timeline-element--education"
+                iconStyle={{background:'#000', color:'#fff'}}
+                icon={<GiTrophyCup />}
+                date='2017' contentStyle={{ background: '#2F2B77', color: '#fff' }}>
+                    <h3 style={{color: '#E4E2FA'}}>Inter IIT Sports Meet</h3>
+                    <p style={{color: '#E4E2FA'}}>
+                        Girls: Bronze
                     </p>
                 </VerticalTimelineElement>
             </VerticalTimeline>

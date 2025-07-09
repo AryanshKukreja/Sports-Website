@@ -1,5 +1,4 @@
 import React from 'react';
-import './cricket.css';
 import Timel from './timeline4';
 import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
@@ -13,6 +12,20 @@ import "slick-carousel/slick/slick-theme.css";
 
 const Hockey = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -84,58 +97,66 @@ const Hockey = () => {
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
         Hockey
       </div>
 
 
-      <div className='about'>
-      Live, study and play in the heart of elite hockey in IIT Bombay! Hockey here is all about fun. Hockey Club provides a unique atmosphere where a player becomes a part of the hockey family which strives to educate, 
-      develop and encourage each and every one of its members on their quest to excellence.
+      <div className='aq-about'>
+      Hockey is one of the competitive and well-loved sports at IIT Bombay. With a dedicated hockey ground and proper facilities, it offers a great space for both casual play and serious competition.
+
+      Under the guidance of our coach Dr. Harish, IIT Bombay Hockey has shown steady growth over the years. Various tournaments and events are conducted throughout the year to help players of all levels improve and enjoy the sport.
+
+      With hard work, strong team spirit, and excellent coaching, the IIT Bombay Hockey team has built a proud record at the Inter-IIT Sports Meet — winning medals for three years in a row, including silver in the last two editions and a bronze before that.
       </div>
 
 
       <div className='facilities'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
+          <h3 className='aq-headingtext'>Facilities</h3>
         </div>
         <div className='content'>
           <p className='facilityText'>
-            <b>Hockey Ground</b> : 
-            Timings : 7 am to 10 PM(lights will be switched off at 10 PM sharp). 
+            IIT Bombay has a proper, standard hockey ground available for all players to practice and play matches. To support everyone, we have well-maintained equipment including shin pads, stockings, hockey sticks, grips, balls, goalie kits, and more.
+
+            We also ensure player safety with essential items like medical kits, sprays, and medical tape. Whether you're a beginner or an experienced player, everything you need to enjoy and play hockey is available on campus. 
           </p>
         </div>
       </div>
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -144,35 +165,34 @@ const Hockey = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
           <div className='contactCard' >
             <img  className='contactImg' />
-            <p className='name'>Rohit Meena</p>
+            <p className='aq-name'>Khushal</p>
             <p className='info'>Institute Hockey Secretary</p>
-              <p className='info'>+91 83067 08378</p>
+              <p className='info'>+91 9001401665</p>
             
           </div>
         </div>
 
       </div>
+
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
         </div>
       </div>
 

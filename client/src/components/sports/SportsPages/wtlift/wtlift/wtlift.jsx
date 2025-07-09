@@ -1,5 +1,4 @@
 import React from 'react';
-import './wtlift.css';
 import Timel from './timeline';
 import { useState,useRef, useEffect} from 'react';
 import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
@@ -26,6 +25,20 @@ import user from '../assets/user.jpg';
 
 const Wtlift = () => {
   const [expandedCard, setExpandedCard] = useState(null);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
 
   const toggleContent = (cardIndex) => {
     if (expandedCard === cardIndex) {
@@ -96,30 +109,35 @@ const Wtlift = () => {
   ];
 
   return (
-    <div className='pageContainer'>
+    <div className='aq-pageContainer'>
       <div className='titleText'>
         Weightlifting
       </div>
 
 
-      <div className='about'>
-      Weightlifting is not only the game of strength. It  needs proper technique with practice as you enter the room. The walls are full of targets set for each player that are to be achieved by December for their Olympics i.e Inter IIT sports meet .Vijay sir also ensures that the accolades are also well displayed and immediately after the targets you see the achievements of your seniors.Whether you're new to lifting or experienced, you'll find a supportive environment to achieve your fitness goals. Join us to improve your physical and mental strength while being part of a dedicated community!
+      <div className='aq-about'>
+        Weightlifting is a strength sport in which athletes attempt to lift heavy weights mounted on barbells in a series of highly technical movements. It is an Olympic discipline that consists of two main lifts: the snatch and the clean and jerk. Each lift requires not just brute strength, but also explosive power, flexibility, balance, coordination, and mental focus.
+
+        Weightlifting is divided into weight classes to ensure fair competition. It emphasizes technique as much as strength, and training typically includes mobility work, accessory exercises, and technique refinement alongside heavy lifting.
+
+        It is the type of sport you take up when you want to not only build your physique, but also build world class strength, healthy joints, and highly mobile and functional muscles.
+
+        Weightlifting Club is led by Vijay Sonigra sir, Retired Nationals player in Weightlifting, acted previously and Maharashtra Weightlifting Team coach, he has been coaching us here for 20+ years, he is light hearted but when it comes to training the attention to detail and strictness is unmatched. Weightlifting isn't just a sport, it's a community of likeminded individuals that are the most regular and hardworking athletes around, all with the common goal of getting stronger, pushing limits, and breaking records
       </div>
 
 
       <div className='facilities'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Facilities</h3>
+          <h3 className='aq-headingtext'>Facilities</h3>
         </div>
         <div className='content'>
           <p className='facilityText'>
-            <ul>
-              <li> New sets of olympic rod and weight plates </li>
-              <li> Weightlifting platform</li>
-              <li> Weight traing bench</li>
-              <li> Squats rack, back press and leg extension machines</li>
-            </ul>
+            Weightlifting Room has many Nelco weightlifting Rods that are upto state level standards, it also has powerlifting rods, platforms, for training. Fun Fact: Weightlifting room also contains more weight plates than the Old Sac gym and New Sac Gym combined.
+
+            Our club has a coach, who comes from 6pm-9pm on weekdays.
+
+            Machines are also present, like lat pulldown, leg extension/curl, leg press, forearm machine, hyper extension machine etc.
           </p>
           <img src={pool3} className='image' />
         </div>
@@ -127,31 +145,35 @@ const Wtlift = () => {
 
 
       <div className='events'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Events</h3>
+          <h3 className='aq-headingtext'>Events</h3>
         </div>
-
         <div className='cardslist'>
-          {cards.map((card, index) => (
-            <div className={`card ${expandedCard === index ? 'expanded' : ''}`}
-            key={index} onClick={() => toggleContent(index)}>
-              <h3 className="card-heading">{card.title}</h3>
-              {expandedCard === index && (
-                <p className="card-content">
-                  {card.content}
-                </p>
-              )}
-            </div>
-          ))}
+          {cards.map((card, index) => {
+            const isExpanded = expandedCard === index;
+            const cardClass = ['aq-card', isExpanded ? 'expanded' : ''].filter(Boolean).join(' ');
+            return (
+              <div
+                className={cardClass}
+                key={index}
+                style={isExpanded ? { zIndex: 10 } : {}}
+                onClick={() => toggleContent(index)}
+              >
+                <h3 className="aq-card-heading">{card.title}</h3>
+                {isExpanded && (
+                  <p className="aq-card-content">{card.content}</p>
+                )}
+              </div>
+            );
+          })}
         </div>
-        {/* cardlist */}
       </div>
 
       <div className='achievements'>
-        <div className='heading' id='head-achieve'>
+        <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Achievements</h3>
+          <h3 className='aq-headingtext'>Achievements</h3>
         </div>
 
         <Timel />
@@ -160,44 +182,41 @@ const Wtlift = () => {
 
 
       <div className='contacts'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Contact</h3>
+          <h3 className='aq-headingtext'>Contact</h3>
         </div>
 
         <div className='contactlist'>
      
           <div className='contactCard' >
-            <img src={asec} className='contactImg' />
-            <p className='name'>Harish Chand</p>
+            <img src={user} className='contactImg' />
+            <p className='aq-name'>Prateek Behera</p>
             <p className='info'>Institute Weightlifting Secretary</p>
-              <p className='info'>+91 83077 12021</p>
+              <p className='info'>+91 62979 57507</p>
           </div>
         </div>
 
       </div>
       <div className='gallery'>
-        <div className='heading'>
+        <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
-          <h3 className='headingtext'>Gallery</h3>
+          <h3 className='aq-headingtext'>Gallery</h3>
         </div>
-        <div className='imageSlider'>
-          <Slider {...imageSliderSettings}>
-            {images.map((image, index) => (
-            <div key={index}>
-              <img src={image} alt={`Slide ${index + 1}`} className='sliderImage' />
-            </div>
-            ))}
-          </Slider>
+        <div className='new-gallery'>
+          <img src={images[currentIndex]} alt="Gallery" className="gallery-image" />
+          <div className="gallery-buttons">
+            <button onClick={handlePrev}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
         </div>
-
       </div>
 
 
-      <div className='timing'>
+      {/* <div className='timing'>
         <p className='side'>Pool Timings</p>
         <img src={time2} className='schimg'/>
-      </div>
+      </div> */}
 
       <div className='location'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.379737570415!2d72.91305249999999!3d19.134848050000016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b809cdbb26f9%3A0x1bc7aa048f060162!2sStudents%20Activity%20Center!5e0!3m2!1sen!2sin!4v1722158615027!5m2!1sen!2sin" 

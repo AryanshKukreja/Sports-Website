@@ -7,11 +7,6 @@ import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import p1 from '../assets/squash1.jpg';
-import p2 from '../assets/squash2.jpg';
-import p3 from '../assets/squash3.jpg';
-import p4 from '../assets/squash4.jpg';
-import p5 from '../assets/squash5.jpg';
 import ReactCardFlip from 'react-card-flip';
 import time from '../assets/time.png';
 import time2 from '../assets/time2.png';
@@ -97,7 +92,7 @@ const Volleyball = () => {
   }
 
   const images = [
-    p1,p2,p3,p4,p5
+
   ];
 
   return (

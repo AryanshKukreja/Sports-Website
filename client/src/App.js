@@ -6,7 +6,6 @@ import Footer from "./components/footer/Footer";
 import ContactUs from "./components/Contact/ContactUs";
 import Sports from "./components/sports/Sports";
 import Aquatics from "./components/sports/SportsPages/aquatics/src/aquatics/aquatics";
-import Volleyball from "./components/sports/SportsPages/volleyball/volleyball/volleyball";
 import SAC from "./components/Contact/SAC";
 import Council from "./components/Contact/SportsCouncil";
 import Webteam from "./components/Contact/webteam";

@@ -140,8 +140,9 @@
 
 /* Container for Info Blocks */
 .container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   gap: 2rem;
   max-width: 1400px;
   margin: 3rem auto;
@@ -154,6 +155,7 @@
   border-radius: 20px;
   padding: 2.5rem 2rem;
   text-align: center;
+  width: 25vw;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
@@ -247,6 +249,13 @@
   background-color: rgba(59, 130, 246, 0.1);
 }
 
+@media (min-width: 1280px){
+    .cs-map-marker{
+    height: 40px !important;
+    width: 40px !important;
+  }
+}
+
 @media (max-width: 1280px){
   .leader {
     height: auto;
@@ -278,6 +287,10 @@
   }
   .enc{
     font-size: 1.3rem;
+  }
+    .cs-map-marker{
+    height: 30px !important;
+    width: 30px !important;
   }
 }
 @media (max-width: 1100px){
@@ -322,9 +335,9 @@
     font-size: 2.8rem;
   }
   
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
+  /* .container {
+    grid-template-columns: repeat(2, 1fr);
+  } */
   
   .leader {
     width: 21rem;
@@ -425,6 +438,10 @@
   }
   .enc{
     font-size: 0.8rem !important;
+  }
+  .cs-map-marker{
+    height: 24px !important;
+    width: 24px !important;
   }
 }
 

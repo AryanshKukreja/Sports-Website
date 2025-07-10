@@ -15,7 +15,10 @@ import pool2 from '../assets/pool2.jpg';
 import pool3 from '../assets/pool3.jpeg';
 import asec from '../assets/asec.png';
 import user from '../assets/user.jpg';
-
+import v1 from '../assets/v1.JPG';
+import v2 from '../assets/v2.JPG';
+import v3 from '../assets/v3.JPG';  
+import v4 from '../assets/v4.JPG';
 const Volleyball = () => {
   const [expandedCard, setExpandedCard] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,7 +95,10 @@ const Volleyball = () => {
   }
 
   const images = [
-
+    v4,
+    v2,
+    v3,
+    v1
   ];
 
   return (
@@ -136,7 +142,7 @@ const Volleyball = () => {
             Fitness & Support:
             Players also benefit from access to the institute’s gym and physiotherapy facilities for strength training, injury prevention, and rehabilitation
           </p>
-          <img src={pool3} className='image' />
+          <img src={v1} className='image' />
         </div>
       </div>
 

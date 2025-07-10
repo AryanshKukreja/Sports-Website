@@ -35,7 +35,7 @@ const Timel = () => {
                     <h3 style={{color: '#E4E2FA'}}>Aavhan</h3>
                     <p style={{color: '#E4E2FA'}}>
                         Girls: Bronze 
-                        Boys: Bronze
+                        <br/>Boys: Bronze
                     </p>
                 </VerticalTimelineElement>
                 <VerticalTimelineElement className="vertical-timeline-element--education"

@@ -27,6 +27,10 @@ import IndianGames from "./components/sports/SportsPages/indiangames/indiangames
 import Hockey from "./components/sports/SportsPages/hockey/hockey/Hockey";
 import Cricket from "./components/sports/SportsPages/cricket/cricket/Cricket";
 import BoardGames from "./components/sports/SportsPages/boardgame/src/aquatics/boardgames";
+import Frisbee from "./components/sports/SportsPages/frisbee/frisbee";
+import AdventureClub from "./components/sports/SportsPages/adventure club/adventureclub";
+import Yogastha from "./components/sports/SportsPages/yogastha/yogastha";
+import Chess from "./components/sports/SportsPages/chess/chess";
 
 function App() {
   // Dynamic basename for GitHub Pages vs local development
@@ -68,6 +72,10 @@ function App() {
             <Route path="/sports/hockey" element={<Hockey />} />
             <Route path="/sports/cricket" element={<Cricket />} />
             <Route path="/sports/boardgames" element={<BoardGames />} />
+            <Route path="/sports/frisbee" element={<Frisbee />} />
+            <Route path= "/sports/adventureclub" element={<AdventureClub/>}/>
+            <Route path= "/sports/yoga" element={<Yogastha/>}/>
+            <Route path= "/sports/chess" element={<Chess/>}/>
             
             {/* Alternative routes without /sports prefix for easier navigation */}
             <Route path="/contact" element={<ContactUs />} />

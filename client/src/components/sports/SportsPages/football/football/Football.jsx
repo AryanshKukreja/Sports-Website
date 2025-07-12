@@ -182,13 +182,6 @@ const Football  = () => {
         <div className='contactlist'>
           <div className='contactCard' >
             <img src={user} className='contactImg' />
-            <p className='aq-name'>XYZ</p>
-            <p className='info'>Coach, Sports Officer</p>
-            <p className='info'></p>
-
-          </div>
-          <div className='contactCard' >
-            <img src={user} className='contactImg' />
             <p className='aq-name'>Yash Shah</p>
             <p className='info'>Institute Football Secretary</p>
             <p className='info'>+91 88494 68317</p>

@@ -177,13 +177,6 @@ const Chess = () => {
         <div className='contactlist'>
           <div className='contactCard' >
             <img src={c1} className='contactImg' />
-            <p className='aq-name'>XYZ</p>
-            <p className='info'>Coach, Sports Officer</p>
-            <p className='info'></p>
-
-          </div>
-          <div className='contactCard' >
-            <img src={c1} className='contactImg' />
             <p className='aq-name'>Shreyas</p>
             <p className='info'>Institute Chess Secretary</p>
             <p className='info'>+91 86574 14616</p>

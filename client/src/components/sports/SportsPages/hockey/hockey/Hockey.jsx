@@ -7,6 +7,11 @@ import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import p1 from "../assets/p1.jpg";
+import p2 from "../assets/p2.jpg";
+import p3 from "../assets/p3.jpg";
+import p4 from "../assets/p4.jpg";
+import p5 from "../assets/p5.jpg";
 
 
 
@@ -94,6 +99,7 @@ const Hockey = () => {
   }
 
   const images = [
+    p1, p2, p3, p4, p5
   ];
 
   return (
@@ -123,6 +129,7 @@ const Hockey = () => {
 
             We also ensure player safety with essential items like medical kits, sprays, and medical tape. Whether you're a beginner or an experienced player, everything you need to enjoy and play hockey is available on campus. 
           </p>
+          <img src={p1} className='image' />
         </div>
       </div>
 

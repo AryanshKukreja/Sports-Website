@@ -188,13 +188,6 @@ const Frisbee = () => {
         <div className='contactlist'>
           <div className='contactCard' >
             <img src={pic_1} className='contactImg' />
-            <p className='aq-name'>XYZ</p>
-            <p className='info'>Coach, Sports Officer</p>
-            <p className='info'></p>
-
-          </div>
-          <div className='contactCard' >
-            <img src={pic_1} className='contactImg' />
             <p className='aq-name'>Shaashvat Sekhar</p>
             <p className='info'>Institute Frisbee Secretary</p>
             <p className='info'>+91 78878 64446</p>

@@ -7,23 +7,18 @@ import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import p1 from '../assets/p1.jpg';
-import p2 from '../assets/p2.jpg';
-import p3 from '../assets/p3.jpg';
-import p4 from '../assets/p4.jpg';
-import p5 from '../assets/p5.jpg';
 import ReactCardFlip from 'react-card-flip';
-import time from '../assets/time.png';
-import time2 from '../assets/time2.png';
-import pool from '../assets/pool.jpg';
-import pool2 from '../assets/pool2.jpg';
-import pool3 from '../assets/pool3.jpeg';
-import asec from '../assets/asec.png';
-import user from '../assets/user.jpg';
+import user from "./assets/user.png";
+import p1 from "./assets/p1.jpg";
+import p2 from "./assets/p2.jpg";
+import p3 from "./assets/p3.jpg";
 
-const Tabletennis = () => {
+
+
+
+
+const Rubics = () => {
   const [expandedCard, setExpandedCard] = useState(null);
-
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
@@ -98,22 +93,22 @@ const Tabletennis = () => {
   }
 
   const images = [
-    p3,p2,p1,p4,p5
+    p1,p2,p3
+
   ];
 
   return (
     <div className='aq-pageContainer'>
       <div className='titleText'>
-        Table Tennis
+        Rubik's Club
       </div>
 
 
       <div className='aq-about'>
-        Table Tennis at IIT Bombay is a thriving sport, defined by passion, precision, and perseverance. Under the guidance of Coach Dhaval Karnik, the TT community has seen remarkable growth, both in participation and performance. With numerous victories at the Inter-IIT Sports Meet, including podium finishes in 2022 and 2023, the IIT Bombay TT contingent is well known.
+        About Rubik's Club!
 
-        Whether it’s intense team practices, spirited ladder matches, or late-night recreational games, the energy in the TT hall is always amazing. Players of all skill levels are welcomed and supported, with structured sessions that emphasize technique, strategy, and sportsmanship.
-
-        While the facility, quipped with world-class tables, TT-specific flooring, and a host of training tools, provides the perfect training ground, it’s the dedication of the players that drives the sport forward.
+        Rubik's Club, IIT Bombay aims to build a vibrant and inclusive community of Speedcubers by promoting the culture of Rubik’s Cube solving in college — fostering logical thinking, focus, and perseverance, while encouraging creativity, and continuous improvement through workshops, events, and friendly challenges. Some of our flagship events include Cube Craze, institute Rubik's Cube Open, Rubik's relay Challenge.
+        
       </div>
 
 
@@ -124,11 +119,8 @@ const Tabletennis = () => {
         </div>
         <div className='content'>
           <p className='facilityText'>
-            The table tennis court at IITB's gymkhana is air-conditioned and contains 8 of the most widely used tables in the world, including the Stag Americas and Stag 1000Dx. The floor has been fully matted with a TT focused flooring to avoid slips and injuries. Further, beginner friendly rackets and balls are provided using an issuance system. 
-            For team practice and exercise ladders, ropes, custom-made rackets and 3 star balls are available as well.
-            More than 30 players can get access to lockers to store their equipment. 
-            A robot has also been ordered to enhance team practice. 
-            Curtains and AC-diffusers are being installed to reduce glare and ball wobble.
+            15 (3x3) & 5 (4x4) 
+            Pyramid cube, mirror cube & other different types of cubes
           </p>
           <img src={p1} className='image' />
         </div>
@@ -160,7 +152,6 @@ const Tabletennis = () => {
           })}
         </div>
       </div>
-
       <div className='achievements'>
         <div className='aq-heading' id='head-achieve'>
           <MdDoubleArrow className='arrow' />
@@ -181,9 +172,9 @@ const Tabletennis = () => {
         <div className='contactlist'>
           <div className='contactCard' >
             <img src={user} className='contactImg' />
-            <p className='aq-name'>Sameer Chopra</p>
-            <p className='info'>Institute Table Tennis Secretary</p>
-              <p className='info'>+91 9717777763</p>
+            <p className='aq-name'>Ghanshyam Choudhary</p>
+            <p className='info'>Institute Volleyball Secretary</p>
+              <p className='info'>+91 89494 01659</p>
           </div>
         </div>
 
@@ -218,5 +209,5 @@ const Tabletennis = () => {
   )
 }
 
-export default Tabletennis;
+export default Rubics;
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import Timel from './timeline';
-import { useState,useRef, useEffect} from 'react';
-import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
+import { useState} from 'react';
+//import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
-import { MdPlayArrow } from "react-icons/md";   //filled triangle
-import Slider from "react-slick";
+//import { MdPlayArrow } from "react-icons/md";   //filled triangle
+//mport Slider from "react-slick";
 /* import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; */
-import ReactCardFlip from 'react-card-flip';
+//import ReactCardFlip from 'react-card-flip';
 import user from "./assets/user.png";
 import p1 from "./assets/p1.jpg";
 import p2 from "./assets/p2.jpg";
@@ -41,14 +41,14 @@ const Rubics = () => {
     }
   };
 
-  const[isFlipped, setIsFlipped]= useState(false);
-  const flipcad = () => {
-    setIsFlipped(!isFlipped);
-  }
-  const[isFlipped1, setIsFlipped1]= useState(false);
-  const flipcad1 = () => {
-    setIsFlipped1(!isFlipped1);
-  }
+  // const[isFlipped, setIsFlipped]= useState(false);
+  // const flipcad = () => {
+  //   setIsFlipped(!isFlipped);
+  // }
+  // const[isFlipped1, setIsFlipped1]= useState(false);
+  // const flipcad1 = () => {
+  //   setIsFlipped1(!isFlipped1);
+  // }
 
   const cards = [
     {
@@ -73,24 +73,24 @@ const Rubics = () => {
     }
   ];
 
-  const achieve = [
-    {
-      title: 'Group Achivements',
-      content:' ',
-    },
-    {
-      title: 'Individual Achivements',
-      content:'c2',
-    }
-  ];
+  // const achieve = [
+  //   {
+  //     title: 'Group Achivements',
+  //     content:' ',
+  //   },
+  //   {
+  //     title: 'Individual Achivements',
+  //     content:'c2',
+  //   }
+  // ];
 
-  const imageSliderSettings = {
-    dots: true,
-    // infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
+  // const imageSliderSettings = {
+  //   dots: true,
+  //   // infinite: true,
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // }
 
   const images = [
     p1,p2,p3
@@ -122,7 +122,7 @@ const Rubics = () => {
             15 (3x3) & 5 (4x4) 
             Pyramid cube, mirror cube & other different types of cubes
           </p>
-          <img src={p1} className='image' />
+          <img alt="alt" src={p1} className='image' />
         </div>
       </div>
 
@@ -171,7 +171,7 @@ const Rubics = () => {
 
         <div className='contactlist'>
           <div className='contactCard' >
-            <img src={user} className='contactImg' />
+            <img alt="alt" src={user} className='contactImg' />
             <p className='aq-name'>Ghanshyam Choudhary</p>
             <p className='info'>Institute Volleyball Secretary</p>
               <p className='info'>+91 89494 01659</p>
@@ -202,7 +202,7 @@ const Rubics = () => {
 
       <div className='location'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.4020806480025!2d72.9093683747526!3d19.133869182082652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b80820306e3f%3A0xa4024d1ba55c8ed1!2sIITB%20New%20Gymkhana!5e0!3m2!1sen!2sin!4v1721551340933!5m2!1sen!2sin" 
-        width="700" height="450" className='map' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        width="700" height="450" className='map' allowFullScreen="" loading="lazy" title="rubiks" referrerPolicy="no-referrer-when-downgrade"></iframe>
         <p className='sideL'>Location</p>
       </div>
     </div>

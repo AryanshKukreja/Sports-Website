@@ -1,14 +1,14 @@
 import React from 'react';
 import Timel from './timeline';
-import { useState,useRef, useEffect} from 'react';
-import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
+import { useState} from 'react';
+//import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
-import { MdPlayArrow } from "react-icons/md";   //filled triangle
-import Slider from "react-slick";
+// import { MdPlayArrow } from "react-icons/md";   //filled triangle
+// import Slider from "react-slick";
 /* import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; */
-import ReactCardFlip from 'react-card-flip';
-import { VscArchive } from 'react-icons/vsc';
+// import ReactCardFlip from 'react-card-flip';
+// import { VscArchive } from 'react-icons/vsc';
 import y1 from "./assets/y1.JPG";
 import y2 from "./assets/y2.JPG";
 import y3 from "./assets/y3.JPG";
@@ -72,12 +72,12 @@ const Yogastha = () => {
     }
   ];
 
-  const imageSliderSettings = {
-    dots: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // const imageSliderSettings = {
+  //   dots: true,
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
 
   const images = [
     y1, y2, y3, y4, y5, y6
@@ -170,7 +170,7 @@ const Yogastha = () => {
         </div>
         <div className='contactlist'>
           <div className='contactCard'>
-            <img className='contactImg' />
+            <img alt="alt" className='contactImg' />
             <p className='aq-name'>??</p>
             <p className='info'>Institute Adventure Club Secretary</p>
             <p className='info'>+91  82334 70289</p>
@@ -201,6 +201,7 @@ const Yogastha = () => {
           allowFullScreen="" 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
+          title="yoga"
         ></iframe>
         <p className='sideL'>Location</p>
       </div>

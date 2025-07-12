@@ -1,14 +1,14 @@
 import React from 'react';
 //import Timel from './timeline';
-import { useState,useRef, useEffect} from 'react';
-import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
+import { useState} from 'react';
+//import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
-import { MdPlayArrow } from "react-icons/md";   //filled triangle
-import Slider from "react-slick";
+//import { MdPlayArrow } from "react-icons/md";   //filled triangle
+//import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReactCardFlip from 'react-card-flip';
-import { VscArchive } from 'react-icons/vsc';
+//import ReactCardFlip from 'react-card-flip';
+//import { VscArchive } from 'react-icons/vsc';
 import p1 from "./assets/p1.jpg";
 import p2 from "./assets/p2.jpg";
 import p3 from "./assets/p3.jpg";
@@ -73,12 +73,12 @@ const AdventureClub = () => {
     }
   ];
 
-  const imageSliderSettings = {
-    dots: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  // const imageSliderSettings = {
+  //   dots: true,
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // };
 
   const images = [
     p1, p2, p3, p4, p5
@@ -144,7 +144,7 @@ const AdventureClub = () => {
         </div>
         <div className='contactlist'>
           <div className='contactCard'>
-            <img className='contactImg' />
+            <img alt="alt" className='contactImg' />
             <p className='aq-name'>Mohit</p>
             <p className='info'>Institute Adventure Club Secretary</p>
             <p className='info'>+91  82334 70289</p>
@@ -175,6 +175,7 @@ const AdventureClub = () => {
           allowFullScreen="" 
           loading="lazy" 
           referrerPolicy="no-referrer-when-downgrade"
+          title="adventure club location"
         ></iframe>
         <p className='sideL'>Location</p>
       </div>

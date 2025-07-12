@@ -1,13 +1,13 @@
 import React from 'react';
 import Timel from './timeline';
-import { useState,useRef, useEffect} from 'react';
-import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
+import { useState} from 'react';
+//import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
-import { MdPlayArrow } from "react-icons/md";   //filled triangle
-import Slider from "react-slick";
+//import { MdPlayArrow } from "react-icons/md";   //filled triangle
+//import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReactCardFlip from 'react-card-flip';
+//import ReactCardFlip from 'react-card-flip';
 import pic_1 from './assets/pic_1.jpg';
 import pic_2 from './assets/pic_2.jpg';
 import pic_3 from './assets/pic_3.jpg';
@@ -26,14 +26,14 @@ const Frisbee = () => {
     }
   };
 
-  const [isFlipped, setIsFlipped] = useState(false);
-  const flipcad = () => {
-    setIsFlipped(!isFlipped);
-  }
-  const [isFlipped1, setIsFlipped1] = useState(false);
-  const flipcad1 = () => {
-    setIsFlipped1(!isFlipped1);
-  }
+  // const [isFlipped, setIsFlipped] = useState(false);
+  // const flipcad = () => {
+  //   setIsFlipped(!isFlipped);
+  // }
+  // const [isFlipped1, setIsFlipped1] = useState(false);
+  // const flipcad1 = () => {
+  //   setIsFlipped1(!isFlipped1);
+  // }
 
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -79,24 +79,24 @@ const Frisbee = () => {
     }
   ];
 
-  const achieve = [
-    {
-      title: 'Group Achivements',
-      content: ' ',
-    },
-    {
-      title: 'Individual Achivements',
-      content: 'c2',
-    }
-  ];
+  // const achieve = [
+  //   {
+  //     title: 'Group Achivements',
+  //     content: ' ',
+  //   },
+  //   {
+  //     title: 'Individual Achivements',
+  //     content: 'c2',
+  //   }
+  // ];
 
-  const imageSliderSettings = {
-    dots: true,
-    // infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
+  // const imageSliderSettings = {
+  //   dots: true,
+  //   // infinite: true,
+  //   speed: 1000,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  // }
 
   const images = [
     pic_1,
@@ -135,7 +135,7 @@ const Frisbee = () => {
             Grounds:
             The club plays on the Football ground, Hockey ground, Outdoor Turf, Indoor Turf, and Kho-Kho area as per convenience.
           </p>
-          <img src={pic_5} className='image' />
+          <img alt="alt" src={pic_5} className='image' />
         </div>
       </div>
 
@@ -187,7 +187,7 @@ const Frisbee = () => {
 
         <div className='contactlist'>
           <div className='contactCard' >
-            <img src={pic_1} className='contactImg' />
+            <img alt="alt" src={pic_1} className='contactImg' />
             <p className='aq-name'>Shaashvat Sekhar</p>
             <p className='info'>Institute Frisbee Secretary</p>
             <p className='info'>+91 78878 64446</p>
@@ -217,7 +217,7 @@ const Frisbee = () => {
 
       <div className='location'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1884.6801509832069!2d72.91331199999999!3d19.135699499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b808367d7489%3A0x5936f3009b0ecd48!2sBaby%20Swimming%20Pool.%20IIT%20Bombay!5e0!3m2!1sen!2sin!4v1719689561544!5m2!1sen!2sin"
-          width="700" height="450" className='map' allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          width="700" height="450" className='map' allowFullScreen="" loading="lazy" title="frisbee" referrerPolicy="no-referrer-when-downgrade"></iframe>
         <p className='sideL'>Location</p>
       </div>
     </div>

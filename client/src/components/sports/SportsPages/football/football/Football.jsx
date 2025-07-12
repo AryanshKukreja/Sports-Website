@@ -4,8 +4,8 @@ import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 import p1 from '../assets/p1.jpeg';
 import football_ground from '../assets/football_ground.jpeg';
 import football_team from '../assets/football_team.jpeg';

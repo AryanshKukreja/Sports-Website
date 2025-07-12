@@ -5,8 +5,8 @@ import { TfiAngleDoubleRight } from "react-icons/tfi"; //thin arrow
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 import { MdPlayArrow } from "react-icons/md";   //filled triangle
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 import ReactCardFlip from 'react-card-flip';
 import bm1 from '../assets/bm1.jpeg';
 import bm2 from '../assets/bm2.jpeg';

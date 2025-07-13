@@ -1,5 +1,20 @@
 import React from "react";
 import "./council.css"
+import councilLogo from "./pictures/Logos_for_Photos/IITB Sports Logo BW (2).png";
+import adventure from './pictures/Logos_for_Photos/adventure.jpg';
+import athletics from './pictures/Logos_for_Photos/Athletics.png';
+import aquatics from './pictures/Logos_for_Photos/Aquatics logo.png';
+import badminton from './pictures/Logos_for_Photos/badminton.png';
+import basketball from './pictures/Logos_for_Photos/basketball.png';
+import cricket from './pictures/Logos_for_Photos/cricket.png';
+import chess from './pictures/Logos_for_Photos/chess.png';
+import football from './pictures/Logos_for_Photos/football.png';
+import hockey from './pictures/Logos_for_Photos/hockey.png';
+import squash from './pictures/Logos_for_Photos/squash.png';
+import tabletennis from './pictures/Logos_for_Photos/tabletennis.png';
+import tennis from './pictures/Logos_for_Photos/tennis.png';
+import volleyball from './pictures/Logos_for_Photos/volleyball.png';
+import weightlifting from './pictures/Logos_for_Photos/weightlifting.png';
 
 const Council = () => {
     return (
@@ -9,7 +24,7 @@ const Council = () => {
                 <h1 className="title">2024-2025</h1>
                 <div className="leader">
                     <h2>General Secretary Sports Affairs</h2>
-                    <img className="gen"alt="" src="./pictures/Logos_for_Photos/IIT" />
+                    <img className="gen" alt="" src={councilLogo} />
                     <p className="name">Rajwardhan Toraskar<br />
                         <a href="/#"><img className="seclogos"alt="" src="./instagram.png" /></a>
                         <a href="/#"><img className="sec_mail_logos" alt=""src="./mail.png" /></a>
@@ -19,7 +34,7 @@ const Council = () => {
                     {/* Nominees FIRST */}
                     <div className="info-block">
                         <h2 style={{fontSize: "1.3rem"}} className="enc">Institute Sports Nominee-Events & Clubs</h2>
-                        <img className="circular" src="/pictures/Raghav.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Atharva Naik<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -28,7 +43,7 @@ const Council = () => {
                     </div>
                     <div className="info-block">
                         <h2>Institute Sports Girls Nominee</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Akshara Naik<br />
                             <a href="/#"><img className="logos" src="/instagram.png" alt="Instagram" /></a>
@@ -37,7 +52,7 @@ const Council = () => {
                     </div>
                     <div className="info-block">
                         <h2>Institute Sports Admin Nominee</h2>
-                        <img className="circular" src="./pictures/Atharva.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Raghav Agrawal<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -50,7 +65,7 @@ const Council = () => {
                     <div className="container">
                     <div className="info-block">
                         <h2>Institute Sports Technical Head</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Aryansh Kukreja<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -59,7 +74,7 @@ const Council = () => {
                     </div>
                     <div className="info-block">
                         <h2>Institute Sports Creatives Head</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Akanksha Patel<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -68,7 +83,7 @@ const Council = () => {
                     </div>
                     <div className="info-block">
                         <h2>Institute Sports Media Head</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={councilLogo} alt="" />
                         <p className="name">
                             Yaman Singh<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -81,152 +96,152 @@ const Council = () => {
             <div className="info-block">
                 <div className="sport-number">1</div>
                 <h2>Institute Athletics Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={athletics} alt="" />
+                <p className="name">
                     Praveen Kumar<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
-            <div class="info-block">
-                <div class="sport-number">2</div>
+            <div className="info-block">
+                <div className="sport-number">2</div>
                 <h2>Institute Aquatics Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={aquatics} alt="" />
+                <p className="name">
                     Meet<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">3</div>
+            <div className="info-block">
+                <div className="sport-number">3</div>
                 <h2>Institute Badminton Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={badminton} alt="" />
+                <p className="name">
                     J Sai Charan<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
-            <div class="info-block">
-                <div class="sport-number">4</div>
+            <div className="info-block">
+                <div className="sport-number">4</div>
                 <h2>Institute Basketball Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={basketball} alt="" />
+                <p className="name">
                     Deepraj<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">5</div>
+            <div className="info-block">
+                <div className="sport-number">5</div>
                 <h2>Institute Board Games Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src="./photo.png" alt="" />
+                <p className="name">
                     Akshat Karkar<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">6</div>
+            <div className="info-block">
+                <div className="sport-number">6</div>
                 <h2>Institute Cricket Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={cricket} alt="" />
+                <p className="name">
                     Pradyumna Gugulothu<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">7</div>
+            <div className="info-block">
+                <div className="sport-number">7</div>
                 <h2>Institute Football Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={football} alt="" />
+                <p className="name">
                     Yash Shah<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">8</div>
+            <div className="info-block">
+                <div className="sport-number">8</div>
                 <h2>Institute Hockey Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={hockey} alt="" />
+                <p className="name">
                     Khushal<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">9</div>
+            <div className="info-block">
+                <div className="sport-number">9</div>
                 <h2>Institute Indian Games Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src="./photo.png" alt="" />
+                <p className="name">
                     Kanak Tembhare<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">10</div>
+            <div className="info-block">
+                <div className="sport-number">10</div>
                 <h2>Institute Lawn Tennis Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={tennis} alt="" />
+                <p className="name">
                     Nehal Gupta<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">11</div>
+            <div className="info-block">
+                <div className="sport-number">11</div>
                 <h2>Institute Squash Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={squash} alt="" />
+                <p className="name">
                     Manthan Goyal<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">12</div>
+            <div className="info-block">
+                <div className="sport-number">12</div>
                 <h2>Institute Table Tennis Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={tabletennis} alt="" />
+                <p className="name">
                     Sameer Chopra<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">13</div>
+            <div className="info-block">
+                <div className="sport-number">13</div>
                 <h2>Institute Volleyball Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={volleyball} alt="" />
+                <p className="name">
                     Ghanshyam Choudhary<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
             
-            <div class="info-block">
-                <div class="sport-number">14</div>
+            <div className="info-block">
+                <div className="sport-number">14</div>
                 <h2>Institute Weightlifting Secretary</h2>
-                <img class="circular" src="./photo.png" alt="" />
-                <p class="name">
+                <img className="circular" src={weightlifting} alt="" />
+                <p className="name">
                     Prateek Behera<br />
-                    <a href="/#"><img class="logos" src="./instagram.png" alt="Instagram" /></a>
-                    <a href="/#"><img class="mail_logos" src="./mail.png" alt="Mail" /></a>
+                    <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
+                    <a href="/#"><img className="mail_logos" src="./mail.png" alt="Mail" /></a>
                 </p>
             </div>
                 </div>
@@ -235,7 +250,7 @@ const Council = () => {
                 <div className="container">
                     <div className="info-block">
                         <h2>Adventure Club Manager</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={adventure} alt="" />
                         <p className="name">
                             Mohit Yadav<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>
@@ -244,7 +259,7 @@ const Council = () => {
                     </div>
                     <div className="info-block">
                         <h2>DKCC Manager</h2>
-                        <img className="circular" src="./photo.png" alt="" />
+                        <img className="circular" src={chess} alt="" />
                         <p className="name">
                             Shreyas Jogdande<br />
                             <a href="/#"><img className="logos" src="./instagram.png" alt="Instagram" /></a>

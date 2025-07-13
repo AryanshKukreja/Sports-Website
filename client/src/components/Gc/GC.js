@@ -94,6 +94,83 @@ const sportsData = {
   ]
 };
 
+const girlssportsData = {
+  Aquatics: [
+    { name: "H10", points: 10 },
+    { name: "H15A", points: 6 },
+    { name: "H15B", points: 4 }
+  ],
+  Athletics: [
+    { name: "H15A", points: 20 },
+    { name: "H10", points: 12 },
+    { name: "H11", points: 8 }
+  ],
+  Badminton: [
+    { name: "H15B", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H11", points: 4 }
+  ],
+  Basketball: [
+    { name: "H10", points: 10 },
+    { name: "H15A", points: 6 },
+    { name: "H15B", points: 4 }
+  ],
+  Carrom: [
+    { name: "H11", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H15A", points: 4 }
+  ],
+  Chess: [
+    { name: "H15A", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H15B", points: 4 }
+  ],
+  Cricket: [
+    { name: "H15B", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H11", points: 4 }
+  ],
+  Football: [
+    { name: "H10", points: 10 },
+    { name: "H15A", points: 6 }
+  ],
+  Hockey: [
+    { name: "H11", points: 10 },
+    { name: "H15B", points: 6 },
+    { name: "H10", points: 4 }
+  ],
+  KhoKho: [
+    { name: "H10", points: 10 },
+    { name: "H11", points: 6 },
+    { name: "H15A", points: 4 }
+  ],
+  LawnTennis: [
+    { name: "H10", points: 10 },
+    { name: "H15A", points: 6 },
+    { name: "H15B", points: 4 }
+  ],
+  Squash: [
+    { name: "H11", points: 10 },
+    { name: "H15A", points: 6 },
+    { name: "H15B", points: 4 }
+  ],
+  TableTennis: [
+    { name: "H15B", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H11", points: 4 }
+  ],
+  Volleyball: [
+    { name: "H15B", points: 10 },
+    { name: "H10", points: 6 },
+    { name: "H11", points: 4 }
+  ],
+  Waterpolo: [
+    { name: "H10", points: 10 },
+    { name: "H15A", points: 6 },
+    { name: "H15B", points: 4 }
+  ]
+};
+
 
 // Overall standings data
 const standings = [
@@ -111,21 +188,56 @@ const standings = [
    { name: "H4", points: 10 },
 ];
 
+const girlsStandings = [
+  { name: "H10", points: 116 },
+  { name: "H15B", points: 100 },
+  { name: "H15A", points: 62 },
+  { name: "H11", points: 56 }
+];
+
 const GC = () => {
+  const [activeTab, setActiveTab] = useState("boys");
+  const currentSportsData = activeTab === "boys" ? sportsData : girlssportsData;
+  const currentStandings = activeTab === "boys" ? standings : girlsStandings;
+
+
   const [selectedSport, setSelectedSport] = useState("");
-  const podium = standings.slice(0, 3);
+  const podium = currentStandings.slice(0, 3);
 
   const handleSportChange = (e) => {
     setSelectedSport(e.target.value);
   };
 
-  const selectedSportData = sportsData[selectedSport] || [];
+  const selectedSportData = currentSportsData[selectedSport] || [];
 
   return (
     <div className="gc-container">
       <header className="gc-header">
         <h1>Inter-Hostel Sports General Championship</h1>
       </header>
+
+      {/* Tab Switcher */}
+      <div className="gc-tabs">
+        <button
+          className={`gc-tab-button ${activeTab === "boys" ? "active" : ""}`}
+          onClick={() => {
+            setActiveTab("boys");
+            setSelectedSport(""); // Reset selected sport
+          }}
+        >
+          Boys GC
+        </button>
+        <button
+          className={`gc-tab-button ${activeTab === "girls" ? "active" : ""}`}
+          onClick={() => {
+            setActiveTab("girls");
+            setSelectedSport(""); // Reset selected sport
+          }}
+        >
+          Girls GC
+        </button>
+      </div>
+
 
       {/* Overall Podium Section */}
       <div className="gc-podium">
@@ -158,7 +270,7 @@ const GC = () => {
             </tr>
           </thead>
           <tbody>
-            {standings.map((hostel, index) => (
+            {currentStandings.map((hostel, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
                 <td>{hostel.name}</td>
@@ -178,7 +290,7 @@ const GC = () => {
           className="sport-dropdown"
         >
           <option value="">Select a Sport</option>
-          {Object.keys(sportsData).map((sport) => (
+          {Object.keys(currentSportsData).map((sport) => (
             <option key={sport} value={sport}>
               {sport}
             </option>

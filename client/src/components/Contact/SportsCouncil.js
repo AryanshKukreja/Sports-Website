@@ -18,7 +18,7 @@ import volleyball from './pictures/Logos_for_Photos/volleyball.png';
 import weightlifting from './pictures/Logos_for_Photos/weightlifting.png';
 import fitness from './pictures/Logos_for_Photos/fitness.png';
 import frisbee from './pictures/Logos_for_Photos/frisbee.png';
-import { MdCall } from 'react-icons/md';
+/* import { MdCall } from 'react-icons/md'; */
 import { FaInstagram } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 

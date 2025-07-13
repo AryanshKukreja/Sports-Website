@@ -5,8 +5,8 @@ import { useState} from 'react';
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 //import { MdPlayArrow } from "react-icons/md";   //filled triangle
 //import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 import bg1 from '../assets/bg1.jpeg';
 import bg2 from '../assets/bg2.jpeg';
 import bg3 from '../assets/bg3.jpeg';
@@ -84,7 +84,7 @@ const BoardGames = () => {
       title: 'Carrom General Championship',
       content: ''
     },
-    {
+    /* {
       title: 'Carrom: PG Mania',
       content: ''
     },
@@ -103,7 +103,7 @@ const BoardGames = () => {
     {
       title: 'Cube of the Month ',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

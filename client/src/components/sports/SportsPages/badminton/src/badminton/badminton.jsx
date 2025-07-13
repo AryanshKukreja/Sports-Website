@@ -5,8 +5,8 @@ import { useState} from 'react';
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 //import { MdPlayArrow } from "react-icons/md";   //filled triangle
 //import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 //import ReactCardFlip from 'react-card-flip';
 import bm1 from '../assets/bm1.jpeg';
 import bm2 from '../assets/bm2.jpeg';
@@ -78,7 +78,7 @@ const Badminton = () => {
       title: 'Battle of Batches',
       content: ''
     },
-    {
+   /*  {
       title: 'Girls Workshop',
       content: ''
     },
@@ -105,7 +105,7 @@ const Badminton = () => {
     {
       title: 'Institute Doubles Open',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

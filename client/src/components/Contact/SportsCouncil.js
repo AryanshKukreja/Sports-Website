@@ -9,7 +9,7 @@ const Council = () => {
                 <h1 className="title">2024-2025</h1>
                 <div className="leader">
                     <h2>General Secretary Sports Affairs</h2>
-                    <img className="gen"alt="" src="/pictures/Raj.jpg" />
+                    <img className="gen"alt="" src="./pictures/Logos_for_Photos/IIT" />
                     <p className="name">Rajwardhan Toraskar<br />
                         <a href="/#"><img className="seclogos"alt="" src="./instagram.png" /></a>
                         <a href="/#"><img className="sec_mail_logos" alt=""src="./mail.png" /></a>

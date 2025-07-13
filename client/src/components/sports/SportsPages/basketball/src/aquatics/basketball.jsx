@@ -5,8 +5,8 @@ import { useState} from 'react';
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 //import { MdPlayArrow } from "react-icons/md";   //filled triangle
 //import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 import bb1 from '../assets/bb1.jpeg';
 
 import bb2 from '../assets/bb2.png';
@@ -90,7 +90,7 @@ const Basketball = () => {
       title: 'She’s Got Game',
       content: ''
     },
-    {
+    /* {
       title: 'Freshiesta',
       content: ''
     },
@@ -125,7 +125,7 @@ const Basketball = () => {
     {
       title: 'Hostel General Championships',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

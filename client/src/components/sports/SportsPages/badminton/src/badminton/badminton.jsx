@@ -78,7 +78,7 @@ const Badminton = () => {
       title: 'Battle of Batches',
       content: ''
     },
-    {
+   /*  {
       title: 'Girls Workshop',
       content: ''
     },
@@ -105,7 +105,7 @@ const Badminton = () => {
     {
       title: 'Institute Doubles Open',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

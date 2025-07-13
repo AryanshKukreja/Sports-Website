@@ -90,7 +90,7 @@ const Basketball = () => {
       title: 'She’s Got Game',
       content: ''
     },
-    {
+    /* {
       title: 'Freshiesta',
       content: ''
     },
@@ -125,7 +125,7 @@ const Basketball = () => {
     {
       title: 'Hostel General Championships',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

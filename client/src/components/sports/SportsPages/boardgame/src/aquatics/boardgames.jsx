@@ -84,7 +84,7 @@ const BoardGames = () => {
       title: 'Carrom General Championship',
       content: ''
     },
-    {
+    /* {
       title: 'Carrom: PG Mania',
       content: ''
     },
@@ -103,7 +103,7 @@ const BoardGames = () => {
     {
       title: 'Cube of the Month ',
       content: ''
-    }
+    } */
   ];
 
   // const achieve = [

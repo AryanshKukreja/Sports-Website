@@ -8,7 +8,7 @@ import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 /* import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"; */
 //import ReactCardFlip from 'react-card-flip';
-import user from "./assets/user.png";
+//import user from "./assets/user.png";
 import p1 from "./assets/p1.jpg";
 import p2 from "./assets/p2.jpg";
 import p3 from "./assets/p3.jpg";
@@ -163,7 +163,7 @@ const Rubics = () => {
       </div>
 
 
-      <div className='contacts'>
+      {/* <div className='contacts'>
         <div className='aq-heading'>
           <MdDoubleArrow className='arrow' />
           <h3 className='aq-headingtext'>Contact</h3>
@@ -178,7 +178,7 @@ const Rubics = () => {
           </div>
         </div>
 
-      </div>
+      </div> */}
 
       <div className='gallery'>
         <div className='aq-heading'>

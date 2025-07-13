@@ -42,12 +42,10 @@
 }
 
 .gc-tab-button.active {
-  background: linear-gradient(135deg, #7ee7ff 0%, #7efff0 100%);
-  color: #0f172a;
   border-color: #7ee7ff;
-  font-weight: 800;
-  box-shadow: 0 0 15px #7ee7ff80;
-  transform: scale(1.05);
+  color: #7ee7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(126, 231, 255, 0.2);
 }
 
 

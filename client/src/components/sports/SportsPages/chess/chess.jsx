@@ -5,8 +5,8 @@ import { useState} from 'react';
 import { MdDoubleArrow } from "react-icons/md"; //bold arrow
 //import { MdPlayArrow } from "react-icons/md";   //filled triangle
 //import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+/* import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; */
 //import ReactCardFlip from 'react-card-flip';
 import c1 from "./assets/c1.jpg";
 import c2 from "./assets/c2.jpg";

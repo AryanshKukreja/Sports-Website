@@ -14,6 +14,7 @@ import AdminPage from "./components/turf-booking/AdminPage";
 import GC from "./components/Gc/GC";
 import SportsCalendar from "./components/EventsTimeline";
 import CourtStatus from "./components/CourtStatus/CourtStatus";
+import ScrollToTop from './components/scrolltotop'; // adjust path as needed
 import "./App.css";
 import Football from './components/sports/SportsPages/football/football/Football';
 import Badminton from './components/sports/SportsPages/badminton/src/badminton/badminton';
@@ -42,6 +43,8 @@ function App() {
       <div className="App">
         <Navbar />
         <main className="main-content">
+          <>
+          <ScrollToTop />
           <Routes>
             {/* Root path routes */}
             <Route path="/" element={<HomePage />} />
@@ -91,6 +94,7 @@ function App() {
             {/* Catch-all route for unmatched paths */}
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
+         </>  
         </main>
         <Footer />
       </div>

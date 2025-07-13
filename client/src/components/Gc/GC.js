@@ -281,6 +281,9 @@ const GC = () => {
         </table>
       </div>
 
+      {activeTab === "boys" && (
+        <>
+
       {/* Sport Selection Section */}
       <div className="sport-selection">
         <h2>Sport-wise Results</h2>
@@ -350,6 +353,8 @@ const GC = () => {
             </tbody>
           </table>
         </div>
+         )}
+      </>
       )}
 
       <footer className="gc-footer">

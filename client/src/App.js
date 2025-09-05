@@ -33,6 +33,8 @@ import AdventureClub from "./components/sports/SportsPages/adventure club/advent
 import Yogastha from "./components/sports/SportsPages/yogastha/yogastha";
 import Chess from "./components/sports/SportsPages/chess/chess";
 import Rubics from "./components/sports/SportsPages/rubics/rubics";
+import Leaderboard from "./components/Leaderboard/leaderboard";
+import LDAdminPanel from "./components/leaderboard_admin_panel/LD_admin_panel";
 
 function App() {
   // Dynamic basename for GitHub Pages vs local development
@@ -89,7 +91,8 @@ function App() {
             <Route path="/turfbooking" element={<BookingPage/>} />
             <Route path="/GC" element={<GC/>} />
             <Route path="/events-timeline" element={<SportsCalendar/>} />
-            
+            <Route path="/leaderboard" element={<Leaderboard />} />
+            <Route path="/admin" element={<LDAdminPanel />} />
             
             {/* Catch-all route for unmatched paths */}
             <Route path="*" element={<Navigate to="/" replace />} />

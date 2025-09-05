@@ -1,0 +1,70 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+.admin-panel-container {
+  font-family: 'Inter', sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  color: #cbd5e1;
+}
+
+.admin-form {
+  background: #1e293b;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  border: 1px solid rgba(255,255,255,0.05);
+  text-align: center;
+}
+
+.admin-panel-container h2 {
+  margin-bottom: 1rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #e53e3e 0%, #f56565 50%, #fc8181 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.admin-form input,
+.admin-form select {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 2px solid #334155;
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-form input:focus,
+.admin-form select:focus {
+  outline: none;
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+}
+
+.admin-form button {
+  padding: 0.9rem 1.2rem;
+  background: linear-gradient(135deg, #e53e3e 0%, #f56565 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.admin-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(229, 62, 62, 0.3);
+}

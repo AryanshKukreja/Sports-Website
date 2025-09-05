@@ -1,0 +1,205 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.leaderboard-container {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f172a;
+  min-height: 100vh;
+  color: #e2e8f0;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+.leaderboard-container h1 {
+  text-align: center;
+  font-size: 3.5vw;
+  font-weight: 900;
+  color: #7ee7ff;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.leaderboard-container h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 4px;
+  background: #7ee7ff;
+  border-radius: 3px;
+}
+
+/* Tabs for sports */
+.leaderboard-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.leaderboard-tab {
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #cbd5e0;
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border: 2px solid #4a5568;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.leaderboard-tab:hover,
+.leaderboard-tab.active {
+  border-color: #7ee7ff;
+  color: #7ee7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(126, 231, 255, 0.2);
+}
+
+/* Table container */
+.leaderboard-table-container {
+  max-width: 1000px;
+  margin: 0 auto 4rem auto;
+  overflow-x: auto;
+  padding: 0 1rem;
+}
+
+.leaderboard-table {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  border-collapse: collapse;
+}
+
+.leaderboard-table th {
+  background: linear-gradient(135deg, #7ee7ff 0%, #7eff91 100%);
+  color: #0f172a;
+  padding: 1.25rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.leaderboard-table td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #4a5568;
+  font-weight: 600;
+  color: #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-table tbody tr:hover {
+  background: #2d3748;
+  transform: scale(1.01);
+}
+
+.leaderboard-table tbody tr:nth-child(1) td {
+  background: linear-gradient(135deg, #2c2a21 0%, #3e3a2f 100%);
+  color: #d69e2e;
+  font-weight: 800;
+}
+
+.leaderboard-table tbody tr:nth-child(2) td {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  color: #cbd5e0;
+  font-weight: 700;
+}
+
+.leaderboard-table tbody tr:nth-child(3) td {
+  background: linear-gradient(135deg, #3c2e25 0%, #4f3a2e 100%);
+  color: #c05621;
+  font-weight: 700;
+}
+
+/* Podium display for top 3 */
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.podium .place {
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 140px;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+
+.podium .first {
+  height: 220px;
+  background: linear-gradient(135deg, #2c2a21 0%, #3e3a2f 100%);
+  color: #d69e2e;
+}
+
+.podium .second {
+  height: 180px;
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  color: #cbd5e0;
+}
+
+.podium .third {
+  height: 140px;
+  background: linear-gradient(135deg, #3c2e25 0%, #4f3a2e 100%);
+  color: #c05621;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .leaderboard-tabs {
+    gap: 0.5rem;
+  }
+  .leaderboard-tab {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .podium {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .podium .place {
+    width: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .leaderboard-container h1 {
+    font-size: 2rem;
+  }
+  .leaderboard-tab {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .leaderboard-table th,
+  .leaderboard-table td {
+    font-size: 0.9rem;
+    padding: 0.75rem 0.5rem;
+  }
+}

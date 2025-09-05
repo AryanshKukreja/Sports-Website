@@ -47,6 +47,13 @@ const Navbar = () => {
             <li className='menuItem'>
               <a href="/sports/contact">Contact Us</a>
             </li>
+            <li className='menuItem'>
+              <a href="/leaderboard">Leaderboard</a>
+            </li>
+            <li className="menuItem">
+              <a href="/admin">Update Points Here</a>
+            </li>
+
           </ul>
           {/* hamburget menu start  */}
           {/* <div className="hamburger-menu">
